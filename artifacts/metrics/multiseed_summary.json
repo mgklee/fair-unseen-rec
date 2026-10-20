@@ -1,0 +1,1110 @@
+{
+  "by_support": {
+    "1": {
+      "coverage": {
+        "delta_fair_minus_naive": {
+          "mean": 0.0090321353869557,
+          "sample_std": 0.01573227343799938
+        },
+        "fair": {
+          "mean": 0.07995816695189199,
+          "sample_std": 0.01132791101624376
+        },
+        "fair_better_runs": 2,
+        "lower_is_better": false,
+        "naive": {
+          "mean": 0.07092603156493629,
+          "sample_std": 0.026926741365221624
+        },
+        "runs": 3
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": {
+          "mean": 0.002734606253572062,
+          "sample_std": 0.01945810703322554
+        },
+        "fair": {
+          "mean": 0.1198537500937988,
+          "sample_std": 0.014149279788807352
+        },
+        "fair_better_runs": 2,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.11711914384022673,
+          "sample_std": 0.005443920093028406
+        },
+        "runs": 3
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": {
+          "mean": 0.017708704023117593,
+          "sample_std": 0.006737742597846204
+        },
+        "fair": {
+          "mean": 0.19543872225905595,
+          "sample_std": 0.0014989032182066418
+        },
+        "fair_better_runs": 0,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.17773001823593834,
+          "sample_std": 0.005413821600359779
+        },
+        "runs": 3
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": {
+          "mean": -0.016487002742864465,
+          "sample_std": 0.010593155807157036
+        },
+        "fair": {
+          "mean": 0.33323325063576226,
+          "sample_std": 0.0022973789096942965
+        },
+        "fair_better_runs": 0,
+        "lower_is_better": false,
+        "naive": {
+          "mean": 0.3497202533786267,
+          "sample_std": 0.011478739031957534
+        },
+        "runs": 3
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": {
+          "mean": 0.004874276700042146,
+          "sample_std": 0.006380557733724689
+        },
+        "fair": {
+          "mean": 0.06834927718864643,
+          "sample_std": 0.0047877571127032835
+        },
+        "fair_better_runs": 1,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.06347500048860429,
+          "sample_std": 0.006673256339234133
+        },
+        "runs": 3
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": {
+          "mean": 0.00876067510320581,
+          "sample_std": 0.009114276542450674
+        },
+        "fair": {
+          "mean": 0.07026997825587833,
+          "sample_std": 0.015381547973713088
+        },
+        "fair_better_runs": 1,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.06150930315267252,
+          "sample_std": 0.013092294548537645
+        },
+        "runs": 3
+      }
+    },
+    "10": {
+      "coverage": {
+        "delta_fair_minus_naive": {
+          "mean": 0.013405590416428975,
+          "sample_std": 0.025336936905235433
+        },
+        "fair": {
+          "mean": 0.11076250237687774,
+          "sample_std": 0.013530427385694542
+        },
+        "fair_better_runs": 2,
+        "lower_is_better": false,
+        "naive": {
+          "mean": 0.09735691196044875,
+          "sample_std": 0.03797926349236468
+        },
+        "runs": 3
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": {
+          "mean": -0.01743177609437661,
+          "sample_std": 0.023449559640340293
+        },
+        "fair": {
+          "mean": 0.25172270135305,
+          "sample_std": 0.023532898503295166
+        },
+        "fair_better_runs": 2,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.26915447744742665,
+          "sample_std": 0.02977971347365734
+        },
+        "runs": 3
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": {
+          "mean": -0.007051146892456284,
+          "sample_std": 0.017241034116121018
+        },
+        "fair": {
+          "mean": 0.09005202727705378,
+          "sample_std": 0.018428065500712968
+        },
+        "fair_better_runs": 2,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.09710317416951006,
+          "sample_std": 0.02219279765137602
+        },
+        "runs": 3
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": {
+          "mean": -0.005164389070391888,
+          "sample_std": 0.00819386177416201
+        },
+        "fair": {
+          "mean": 0.3452697080677713,
+          "sample_std": 0.0042760748762434506
+        },
+        "fair_better_runs": 1,
+        "lower_is_better": false,
+        "naive": {
+          "mean": 0.35043409713816315,
+          "sample_std": 0.008865060072351888
+        },
+        "runs": 3
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": {
+          "mean": -0.012428035477668428,
+          "sample_std": 0.009270860728395043
+        },
+        "fair": {
+          "mean": 0.05995167789256539,
+          "sample_std": 0.011477367751967019
+        },
+        "fair_better_runs": 3,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.07237971337023381,
+          "sample_std": 0.004379041531263394
+        },
+        "runs": 3
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": {
+          "mean": 0.011812955534846847,
+          "sample_std": 0.011653764365127559
+        },
+        "fair": {
+          "mean": 0.25263923215789025,
+          "sample_std": 0.010615765331870001
+        },
+        "fair_better_runs": 1,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.24082627662304337,
+          "sample_std": 0.003213128137904787
+        },
+        "runs": 3
+      }
+    },
+    "20": {
+      "coverage": {
+        "delta_fair_minus_naive": {
+          "mean": 0.014356341509792725,
+          "sample_std": 0.034984410633286764
+        },
+        "fair": {
+          "mean": 0.14670089370602776,
+          "sample_std": 0.014890109869140057
+        },
+        "fair_better_runs": 2,
+        "lower_is_better": false,
+        "naive": {
+          "mean": 0.13234455219623503,
+          "sample_std": 0.049860618044534115
+        },
+        "runs": 3
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": {
+          "mean": -0.004262722438273525,
+          "sample_std": 0.027510481546247228
+        },
+        "fair": {
+          "mean": 0.39568894286183226,
+          "sample_std": 0.033220451072616924
+        },
+        "fair_better_runs": 2,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.3999516653001058,
+          "sample_std": 0.014350989970277435
+        },
+        "runs": 3
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": {
+          "mean": -0.016170907866509737,
+          "sample_std": 0.023800129176638225
+        },
+        "fair": {
+          "mean": 0.14695773605975918,
+          "sample_std": 0.04037299593963883
+        },
+        "fair_better_runs": 2,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.1631286439262689,
+          "sample_std": 0.03694030601394654
+        },
+        "runs": 3
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": {
+          "mean": -0.010313144582906072,
+          "sample_std": 0.01898902538199425
+        },
+        "fair": {
+          "mean": 0.2877697659473606,
+          "sample_std": 0.002085510143093489
+        },
+        "fair_better_runs": 1,
+        "lower_is_better": false,
+        "naive": {
+          "mean": 0.29808291053026664,
+          "sample_std": 0.020834287665693334
+        },
+        "runs": 3
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": {
+          "mean": 1.3616380601747894e-05,
+          "sample_std": 0.0040422055500550285
+        },
+        "fair": {
+          "mean": 0.0572497416493808,
+          "sample_std": 0.006524693528632107
+        },
+        "fair_better_runs": 2,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.05723612526877905,
+          "sample_std": 0.002944003392396289
+        },
+        "runs": 3
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": {
+          "mean": 0.012411706710965253,
+          "sample_std": 0.0017329405812671146
+        },
+        "fair": {
+          "mean": 0.2970998834010868,
+          "sample_std": 0.004237860377232094
+        },
+        "fair_better_runs": 0,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.28468817669012153,
+          "sample_std": 0.0027317636247506066
+        },
+        "runs": 3
+      }
+    },
+    "3": {
+      "coverage": {
+        "delta_fair_minus_naive": {
+          "mean": 0.011694238448374222,
+          "sample_std": 0.013532431448119173
+        },
+        "fair": {
+          "mean": 0.07520441148507322,
+          "sample_std": 0.00586159446350955
+        },
+        "fair_better_runs": 2,
+        "lower_is_better": false,
+        "naive": {
+          "mean": 0.063510173036699,
+          "sample_std": 0.019229631291266765
+        },
+        "runs": 3
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": {
+          "mean": -0.019355577898032255,
+          "sample_std": 0.04790504522995771
+        },
+        "fair": {
+          "mean": 0.17576348490118915,
+          "sample_std": 0.02779653119871804
+        },
+        "fair_better_runs": 2,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.19511906279922142,
+          "sample_std": 0.02100424798953872
+        },
+        "runs": 3
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": {
+          "mean": 0.012309948025933834,
+          "sample_std": 0.015790512482277995
+        },
+        "fair": {
+          "mean": 0.10092471559398,
+          "sample_std": 0.005346314255386577
+        },
+        "fair_better_runs": 1,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.08861476756804618,
+          "sample_std": 0.017911479020856155
+        },
+        "runs": 3
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": {
+          "mean": -0.007515267004086075,
+          "sample_std": 0.00803981487819955
+        },
+        "fair": {
+          "mean": 0.36042911815150297,
+          "sample_std": 0.0018015527853320991
+        },
+        "fair_better_runs": 1,
+        "lower_is_better": false,
+        "naive": {
+          "mean": 0.3679443851555891,
+          "sample_std": 0.0072184377856457016
+        },
+        "runs": 3
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": {
+          "mean": 0.010698838000801255,
+          "sample_std": 0.007937080682280512
+        },
+        "fair": {
+          "mean": 0.0695354855695821,
+          "sample_std": 0.0011894912911501446
+        },
+        "fair_better_runs": 0,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.05883664756878084,
+          "sample_std": 0.007450678973487223
+        },
+        "runs": 3
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": {
+          "mean": 0.0050871340527351245,
+          "sample_std": 0.017879819802964304
+        },
+        "fair": {
+          "mean": 0.13904983140427407,
+          "sample_std": 0.005958346002510572
+        },
+        "fair_better_runs": 1,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.13396269735153896,
+          "sample_std": 0.015526858253865995
+        },
+        "runs": 3
+      }
+    },
+    "5": {
+      "coverage": {
+        "delta_fair_minus_naive": {
+          "mean": 0.012644989541737976,
+          "sample_std": 0.01732455292624925
+        },
+        "fair": {
+          "mean": 0.08223996957596501,
+          "sample_std": 0.007580414248061469
+        },
+        "fair_better_runs": 2,
+        "lower_is_better": false,
+        "naive": {
+          "mean": 0.06959498003422704,
+          "sample_std": 0.024633628742779693
+        },
+        "runs": 3
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": {
+          "mean": -0.013173503091311442,
+          "sample_std": 0.030071105666285902
+        },
+        "fair": {
+          "mean": 0.19694714680365139,
+          "sample_std": 0.01696187367353869
+        },
+        "fair_better_runs": 2,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.21012064989496282,
+          "sample_std": 0.017448791248487597
+        },
+        "runs": 3
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": {
+          "mean": -0.031659823636562466,
+          "sample_std": 0.010259322739712246
+        },
+        "fair": {
+          "mean": 0.07506540446892687,
+          "sample_std": 0.013385997026083398
+        },
+        "fair_better_runs": 3,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.10672522810548934,
+          "sample_std": 0.02276238306347498
+        },
+        "runs": 3
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": {
+          "mean": -0.005493313499574641,
+          "sample_std": 0.007784119449039195
+        },
+        "fair": {
+          "mean": 0.3698582064932833,
+          "sample_std": 0.003829311384717527
+        },
+        "fair_better_runs": 1,
+        "lower_is_better": false,
+        "naive": {
+          "mean": 0.375351519992858,
+          "sample_std": 0.005247783227712255
+        },
+        "runs": 3
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": {
+          "mean": 0.011433598881143314,
+          "sample_std": 0.014842188510048595
+        },
+        "fair": {
+          "mean": 0.07672375615312577,
+          "sample_std": 0.010506221258308081
+        },
+        "fair_better_runs": 0,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.06529015727198245,
+          "sample_std": 0.010139419352300111
+        },
+        "runs": 3
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": {
+          "mean": 0.013852311044483182,
+          "sample_std": 0.0228922201001931
+        },
+        "fair": {
+          "mean": 0.1945873794056607,
+          "sample_std": 0.00850988050817665
+        },
+        "fair_better_runs": 1,
+        "lower_is_better": true,
+        "naive": {
+          "mean": 0.1807350683611775,
+          "sample_std": 0.015151438794937945
+        },
+        "runs": 3
+      }
+    }
+  },
+  "data_fingerprint": "51ef38f20b07e20b64058dffc96e3d31fbf54f72ace189a38117190cb791a759",
+  "macro_over_seed_support_cases": {
+    "coverage": {
+      "cases": 15,
+      "delta_fair_minus_naive": {
+        "mean": 0.01222665906065792,
+        "sample_std": 0.019352090849513795
+      },
+      "fair_better_cases": 10,
+      "lower_is_better": false
+    },
+    "genre_exposure_l1": {
+      "cases": 15,
+      "delta_fair_minus_naive": {
+        "mean": -0.010297794653684354,
+        "sample_std": 0.027789257231576152
+      },
+      "fair_better_cases": 10,
+      "lower_is_better": true
+    },
+    "genre_residual_l1": {
+      "cases": 15,
+      "delta_fair_minus_naive": {
+        "mean": -0.004972645269295413,
+        "sample_std": 0.023134013731369623
+      },
+      "fair_better_cases": 8,
+      "lower_is_better": true
+    },
+    "ndcg@10": {
+      "cases": 15,
+      "delta_fair_minus_naive": {
+        "mean": -0.008994623379964628,
+        "sample_std": 0.010661395353109577
+      },
+      "fair_better_cases": 4,
+      "lower_is_better": false
+    },
+    "ndcg_gender_gap": {
+      "cases": 15,
+      "delta_fair_minus_naive": {
+        "mean": 0.002918458896984007,
+        "sample_std": 0.011937442937295617
+      },
+      "fair_better_cases": 6,
+      "lower_is_better": true
+    },
+    "probe_auc_distance": {
+      "cases": 15,
+      "delta_fair_minus_naive": {
+        "mean": 0.010384956489247244,
+        "sample_std": 0.012755598367753765
+      },
+      "fair_better_cases": 4,
+      "lower_is_better": true
+    }
+  },
+  "paired_records": [
+    {
+      "coverage": {
+        "delta_fair_minus_naive": 0.018539646320593274,
+        "fair": 0.07102110667427268,
+        "naive": 0.052481460353679406
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": -0.006134570995898633,
+        "fair": 0.11233173283511041,
+        "naive": 0.11846630383100905
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": 0.025329921100420844,
+        "fair": 0.1968316969864953,
+        "naive": 0.17150177588607446
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": -0.022641350441247488,
+        "fair": 0.3358163562349797,
+        "naive": 0.3584577066762272
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": -0.0022799918425350785,
+        "fair": 0.06541627524501642,
+        "naive": 0.0676962670875515
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": 0.01667949704901206,
+        "fair": 0.06740677714301146,
+        "naive": 0.050727280093999405
+      },
+      "seed": 42,
+      "support_size": 1
+    },
+    {
+      "coverage": {
+        "delta_fair_minus_naive": 0.02167712492869367,
+        "fair": 0.06959498003422704,
+        "naive": 0.04791785510553337
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": -0.039661584329705374,
+        "fair": 0.15919617828232754,
+        "naive": 0.19885776261203292
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": -0.00591785007107995,
+        "fair": 0.10234586917012849,
+        "naive": 0.10826371924120844
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": -0.010960048955843682,
+        "fair": 0.36162872662920725,
+        "naive": 0.37258877558505094
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": 0.011434386504633964,
+        "fair": 0.07079491449280245,
+        "naive": 0.05936052798816849
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": 0.004146239347406211,
+        "fair": 0.14468619585916287,
+        "naive": 0.14053995651175666
+      },
+      "seed": 42,
+      "support_size": 3
+    },
+    {
+      "coverage": {
+        "delta_fair_minus_naive": 0.027096406160867087,
+        "fair": 0.07815173987450086,
+        "naive": 0.05105533371363377
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": -0.027296886375452384,
+        "fair": 0.19883800613236322,
+        "naive": 0.2261348925078156
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": -0.042995980950785564,
+        "fair": 0.09000794720205353,
+        "naive": 0.1330039281528391
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": -0.00804151465024594,
+        "fair": 0.3663129857994475,
+        "naive": 0.37435450044969343
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": 0.0018281269071302453,
+        "fair": 0.06489610863960543,
+        "naive": 0.06306798173247519
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": 0.0060505382007752795,
+        "fair": 0.19501505881717385,
+        "naive": 0.18896452061639857
+      },
+      "seed": 42,
+      "support_size": 5
+    },
+    {
+      "coverage": {
+        "delta_fair_minus_naive": 0.03650884198516828,
+        "fair": 0.1038220193953223,
+        "naive": 0.06731317741015402
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": -0.0348709500183656,
+        "fair": 0.268666083055206,
+        "naive": 0.3035370330735716
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": -0.016153600508366395,
+        "fair": 0.10627211089236438,
+        "naive": 0.12242571140073077
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": -0.005285064218089552,
+        "fair": 0.34034992211418563,
+        "naive": 0.3456349863322752
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": -0.02133675984362171,
+        "fair": 0.05231305701268718,
+        "naive": 0.07364981685630889
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": 0.012911416339154269,
+        "fair": 0.2502937482273814,
+        "naive": 0.2373823318882271
+      },
+      "seed": 42,
+      "support_size": 10
+    },
+    {
+      "coverage": {
+        "delta_fair_minus_naive": 0.04050199657729606,
+        "fair": 0.13491158014831717,
+        "naive": 0.09440958357102111
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": -0.011014369555507053,
+        "fair": 0.40424205467106555,
+        "naive": 0.4152564242265726
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": -0.033928559516419377,
+        "fair": 0.16599283682230098,
+        "naive": 0.19992139633872036
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": -0.02170052095661812,
+        "fair": 0.2878572878163212,
+        "naive": 0.3095578087729393
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": -0.0031865541492932525,
+        "fair": 0.05399932893704973,
+        "naive": 0.05718588308634298
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": 0.011493321448347582,
+        "fair": 0.2933227989141445,
+        "naive": 0.2818294774657969
+      },
+      "seed": 42,
+      "support_size": 20
+    },
+    {
+      "coverage": {
+        "delta_fair_minus_naive": -0.00912721049629206,
+        "fair": 0.09269823160296635,
+        "naive": 0.10182544209925841
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": -0.01070875803875121,
+        "fair": 0.11105424277785046,
+        "naive": 0.12176300081660167
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": 0.015252703549663155,
+        "fair": 0.19563185667681796,
+        "naive": 0.1803791531271548
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": -0.004255160507529165,
+        "fair": 0.3324647886047367,
+        "naive": 0.3367199491122659
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": 0.009975828305564205,
+        "fair": 0.06575736185982917,
+        "naive": 0.05578153355426496
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": -0.0012020042407789866,
+        "fair": 0.05652121064786675,
+        "naive": 0.057723214888645735
+      },
+      "seed": 43,
+      "support_size": 1
+    },
+    {
+      "coverage": {
+        "delta_fair_minus_naive": -0.0037079292641186423,
+        "fair": 0.08128921848260126,
+        "naive": 0.0849971477467199
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": -0.05376312826473023,
+        "fair": 0.16023977778933904,
+        "naive": 0.21400290605406927
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": 0.02103549561782868,
+        "fair": 0.10541686097820173,
+        "naive": 0.08438136536037305
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": 0.001672961584167687,
+        "fair": 0.36130114850373196,
+        "naive": 0.3596281869195643
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": 0.0024195862600771,
+        "fair": 0.06843114639070674,
+        "naive": 0.06601156013062964
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": 0.023418824196750565,
+        "fair": 0.13964858258039248,
+        "naive": 0.11622975838364191
+      },
+      "seed": 43,
+      "support_size": 3
+    },
+    {
+      "coverage": {
+        "delta_fair_minus_naive": -0.006560182544209925,
+        "fair": 0.09098687963491157,
+        "naive": 0.0975470621791215
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": -0.03358304967124087,
+        "fair": 0.1791190737809125,
+        "naive": 0.21270212345215336
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": -0.028970395024012455,
+        "fair": 0.06416992094716253,
+        "naive": 0.09314031597117499
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": 0.003245538831090744,
+        "fair": 0.3739193061574422,
+        "naive": 0.37067376732635143
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": 0.003944396823839846,
+        "fair": 0.08030075495913291,
+        "naive": 0.07635635813529307
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": 0.03962562294882699,
+        "fair": 0.20287535621193087,
+        "naive": 0.16324973326310388
+      },
+      "seed": 43,
+      "support_size": 5
+    },
+    {
+      "coverage": {
+        "delta_fair_minus_naive": -0.013690815744438117,
+        "fair": 0.12635482030804335,
+        "naive": 0.14004563605248146
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": -0.02665064661797778,
+        "fair": 0.22485294880141032,
+        "naive": 0.2515035954193881
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": -0.01783329091484713,
+        "fair": 0.07001406596376729,
+        "naive": 0.08784735687861442
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": 0.003089143784030912,
+        "fair": 0.3480923626404042,
+        "naive": 0.3450032188563733
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": -0.002833164441095659,
+        "fair": 0.07315014468070602,
+        "naive": 0.07598330912180168
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": 0.022878597571681314,
+        "fair": 0.26423159515416716,
+        "naive": 0.24135299758248585
+      },
+      "seed": 43,
+      "support_size": 10
+    },
+    {
+      "coverage": {
+        "delta_fair_minus_naive": -0.02538505419281234,
+        "fair": 0.16343411294922988,
+        "naive": 0.18881916714204222
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": -0.027768826652970813,
+        "fair": 0.3590282615521317,
+        "naive": 0.3867970882051025
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": -0.025456484171408028,
+        "fair": 0.10058604743918056,
+        "naive": 0.1260425316105886
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": 0.011607953423467987,
+        "fair": 0.2856418726997135,
+        "naive": 0.2740339192762455
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": 0.00455625277400723,
+        "fair": 0.06476118097258146,
+        "naive": 0.06020492819857423
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": 0.014410545223721316,
+        "fair": 0.3016828059370906,
+        "naive": 0.2872722607133693
+      },
+      "seed": 43,
+      "support_size": 20
+    },
+    {
+      "coverage": {
+        "delta_fair_minus_naive": 0.017683970336565887,
+        "fair": 0.07615516257843696,
+        "naive": 0.05847119224187108
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": 0.02504714779536603,
+        "fair": 0.13617527466843551,
+        "naive": 0.11112812687306949
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": 0.012543487419268778,
+        "fair": 0.19385261311385457,
+        "naive": 0.1813091256945858
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": -0.022564497279816742,
+        "fair": 0.3314186070675704,
+        "naive": 0.35398310434738717
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": 0.006926993637097312,
+        "fair": 0.07387419446109372,
+        "naive": 0.06694720082399641
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": 0.010804532501384356,
+        "fair": 0.08688194697675677,
+        "naive": 0.07607741447537242
+      },
+      "seed": 44,
+      "support_size": 1
+    },
+    {
+      "coverage": {
+        "delta_fair_minus_naive": 0.01711351968054764,
+        "fair": 0.07472903593839134,
+        "naive": 0.057615516257843696
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": 0.03535797890033884,
+        "fair": 0.2078544986319009,
+        "naive": 0.17249651973156205
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": 0.021812198531052776,
+        "fair": 0.0950114166336098,
+        "naive": 0.07319921810255703
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": -0.013258713640582231,
+        "fair": 0.35835747932156975,
+        "naive": 0.371616192962152
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": 0.0182425412376927,
+        "fair": 0.06938039582523708,
+        "naive": 0.051137854587544385
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": -0.012303661385951403,
+        "fair": 0.13281471577326687,
+        "naive": 0.14511837715921827
+      },
+      "seed": 44,
+      "support_size": 3
+    },
+    {
+      "coverage": {
+        "delta_fair_minus_naive": 0.017398745008556767,
+        "fair": 0.0775812892184826,
+        "naive": 0.06018254420992584
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": 0.021359426772758927,
+        "fair": 0.21288436049767842,
+        "naive": 0.1915249337249195
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": -0.023013094934889386,
+        "fair": 0.07101834525756455,
+        "naive": 0.09403144019245394
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": -0.011683964679568726,
+        "fair": 0.3693423275229603,
+        "naive": 0.38102629220252904
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": 0.02852827291245985,
+        "fair": 0.08497440486063895,
+        "naive": 0.0564461319481791
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": -0.004119228016152721,
+        "fair": 0.18587172318787737,
+        "naive": 0.1899909512040301
+      },
+      "seed": 44,
+      "support_size": 5
+    },
+    {
+      "coverage": {
+        "delta_fair_minus_naive": 0.01739874500855676,
+        "fair": 0.10211066742726754,
+        "naive": 0.08471192241871078
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": 0.009226268353213551,
+        "fair": 0.2616490722025338,
+        "naive": 0.25242280384932025
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": 0.012833450745844674,
+        "fair": 0.09386990497502964,
+        "naive": 0.08103645422918497
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": -0.013297246777117022,
+        "fair": 0.347366839448724,
+        "naive": 0.360664086225841
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": -0.013114182148287912,
+        "fair": 0.054391831984302974,
+        "naive": 0.06750601413259089
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": -0.000351147306295041,
+        "fair": 0.24339235309212215,
+        "naive": 0.2437435003984172
+      },
+      "seed": 44,
+      "support_size": 10
+    },
+    {
+      "coverage": {
+        "delta_fair_minus_naive": 0.02795208214489446,
+        "fair": 0.1417569880205362,
+        "naive": 0.11380490587564175
+      },
+      "genre_exposure_l1": {
+        "delta_fair_minus_naive": 0.02599502889365729,
+        "fair": 0.4237965123622995,
+        "naive": 0.3978014834686422
+      },
+      "genre_residual_l1": {
+        "delta_fair_minus_naive": 0.010872320088298193,
+        "fair": 0.174294323917796,
+        "naive": 0.16342200382949781
+      },
+      "ndcg@10": {
+        "delta_fair_minus_naive": -0.020846866215568083,
+        "fair": 0.2898101373260471,
+        "naive": 0.3106570035416152
+      },
+      "ndcg_gender_gap": {
+        "delta_fair_minus_naive": -0.0013288494829087338,
+        "fair": 0.052988715038511214,
+        "naive": 0.05431756452141995
+      },
+      "probe_auc_distance": {
+        "delta_fair_minus_naive": 0.011331253460826862,
+        "fair": 0.2962940453520252,
+        "naive": 0.28496279189119833
+      },
+      "seed": 44,
+      "support_size": 20
+    }
+  ],
+  "protocol": {
+    "paired_seeds": [
+      42,
+      43,
+      44
+    ],
+    "selection": "validation only; test comparisons used for reporting, not tuning",
+    "support_sizes": [
+      1,
+      3,
+      5,
+      10,
+      20
+    ],
+    "uncertainty": "sample standard deviation across three training seeds",
+    "warning": "Three seeds do not establish statistical significance. Lower genre exposure does not by itself imply fair utility or representation privacy."
+  }
+}

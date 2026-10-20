@@ -1,0 +1,3564 @@
+{
+  "catalog_items": 3883,
+  "cold_catalog_items": 377,
+  "data_fingerprint": "51ef38f20b07e20b64058dffc96e3d31fbf54f72ace189a38117190cb791a759",
+  "deployment": {
+    "fair": {
+      "checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/fair_unseen_rec/artifacts/runs/seed44/softgbs_fair/best.pt",
+      "checkpoint_epoch": 23,
+      "checkpoint_sha256": "511821c380e85dc2dff509b3ab148c81f0ba0cde770fb7a5a530b7abc6423fb6",
+      "label": "Adv-MultVAE",
+      "model_type": "adversarial_multvae"
+    },
+    "naive": {
+      "checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/fair_unseen_rec/artifacts/runs/seed44/baseline/best.pt",
+      "checkpoint_epoch": 18,
+      "checkpoint_sha256": "5ff432b2ca1f2436998ee92f4c2fe3f10acef434590c945e6a7154e4e064dd73",
+      "label": "MultVAE",
+      "model_type": "multvae"
+    }
+  },
+  "models": {
+    "Adv-MultVAE": {
+      "checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/fair_unseen_rec/artifacts/runs/seed44/softgbs_fair/best.pt",
+      "checkpoint_epoch": 23,
+      "model_type": "adversarial_multvae",
+      "support_results": {
+        "1": {
+          "absolute_gender_gaps": {
+            "hitrate@10": 0.06625879556473946,
+            "ndcg@10": 0.07387419446109372,
+            "recall@10": 0.004427036880356554
+          },
+          "catalog_items": 3883,
+          "cohort_by_gender": {
+            "female": {
+              "ranking_eligibility_rate": 1.0,
+              "ranking_evaluated": 171,
+              "total": 171,
+              "without_future_positive": 0
+            },
+            "male": {
+              "ranking_eligibility_rate": 1.0,
+              "ranking_evaluated": 433,
+              "total": 433,
+              "without_future_positive": 0
+            }
+          },
+          "coverage": 0.07615516257843696,
+          "eligible_catalog_items": 3506,
+          "excluded_cold_query_positives": 18,
+          "genre_exposure": {
+            "distribution_by_gender": {
+              "female": {
+                "Action": 0.13395496929724812,
+                "Adventure": 0.08141914942005914,
+                "Animation": 0.012281100750511713,
+                "Children's": 0.02729133500113714,
+                "Comedy": 0.1093927677962247,
+                "Crime": 0.030930179667955426,
+                "Documentary": 0.0006822833750284285,
+                "Drama": 0.21264498521719355,
+                "Fantasy": 0.03502387991812599,
+                "Film-Noir": 0.003866272458494428,
+                "Horror": 0.006140550375255857,
+                "Musical": 0.01523766204230157,
+                "Mystery": 0.010689106208778713,
+                "Romance": 0.06572663179440527,
+                "Sci-Fi": 0.0934728223788947,
+                "Thriller": 0.07709802137821242,
+                "War": 0.08255628837843984,
+                "Western": 0.0015919945417329998
+              },
+              "male": {
+                "Action": 0.15752364574376612,
+                "Adventure": 0.09337919174548581,
+                "Animation": 0.013327601031814273,
+                "Children's": 0.026913155631986242,
+                "Comedy": 0.09269131556319862,
+                "Crime": 0.030266552020636286,
+                "Documentary": 0.0007738607050730869,
+                "Drama": 0.18675838349097162,
+                "Fantasy": 0.03731728288907996,
+                "Film-Noir": 0.005674978503869304,
+                "Horror": 0.007738607050730868,
+                "Musical": 0.009888220120378332,
+                "Mystery": 0.00885640584694755,
+                "Romance": 0.049183147033533964,
+                "Sci-Fi": 0.111006018916595,
+                "Thriller": 0.08452278589853826,
+                "War": 0.08331900257953569,
+                "Western": 0.0008598452278589854
+              }
+            },
+            "female_minus_male_by_genre": {
+              "Action": -0.023568676446518,
+              "Adventure": -0.011960042325426676,
+              "Animation": -0.00104650028130256,
+              "Children's": 0.00037817936915089667,
+              "Comedy": 0.016701452233026076,
+              "Crime": 0.0006636276473191392,
+              "Documentary": -9.15773300446584e-05,
+              "Drama": 0.025886601726221925,
+              "Fantasy": -0.00229340297095397,
+              "Film-Noir": -0.0018087060453748755,
+              "Horror": -0.0015980566754750115,
+              "Musical": 0.005349441921923237,
+              "Mystery": 0.0018327003618311636,
+              "Romance": 0.016543484760871308,
+              "Sci-Fi": -0.017533196537700302,
+              "Thriller": -0.007424764520325838,
+              "War": -0.000762714201095846,
+              "Western": 0.0007321493138740144
+            },
+            "jensen_shannon_between_genders": 0.004411006015479512,
+            "l1_between_genders": 0.13617527466843551,
+            "normalization": "multi-label genre tag share over hard Top-K items",
+            "preference_amplification": {
+              "amplification_by_genre": {
+                "Action": -0.0017525081187217545,
+                "Adventure": 0.02615734416405284,
+                "Animation": 0.0071188743957000256,
+                "Children's": -0.0024715806899114866,
+                "Comedy": 0.014981260280275993,
+                "Crime": -0.01060990502156237,
+                "Documentary": 0.004670327431860104,
+                "Drama": -0.04625810111615533,
+                "Fantasy": 0.0053330274461741226,
+                "Film-Noir": -0.007515608961580116,
+                "Horror": 0.000720141921793354,
+                "Musical": 0.009705292789402013,
+                "Mystery": -0.009175051576153332,
+                "Romance": 0.015901181327870204,
+                "Sci-Fi": 0.0049400408192579945,
+                "Thriller": -0.016778769688284498,
+                "War": -0.0023647813845583815,
+                "Western": 0.007398815980540681
+              },
+              "female_minus_male_history_by_genre": {
+                "Action": -0.021816168327796245,
+                "Adventure": -0.038117386489479516,
+                "Animation": -0.008165374677002585,
+                "Children's": 0.0028497600590623832,
+                "Comedy": 0.001720191952750083,
+                "Crime": 0.011273532668881509,
+                "Documentary": -0.004761904761904762,
+                "Drama": 0.07214470284237726,
+                "Fantasy": -0.0076264304171280925,
+                "Film-Noir": 0.00570690291620524,
+                "Horror": -0.0023181985972683655,
+                "Musical": -0.004355850867478775,
+                "Mystery": 0.011007751937984495,
+                "Romance": 0.000642303433001104,
+                "Sci-Fi": -0.022473237356958296,
+                "Thriller": 0.00935400516795866,
+                "War": 0.0016020671834625355,
+                "Western": -0.006666666666666667
+              },
+              "history_l1_between_genders": 0.23260243632336655,
+              "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+              "recommendation_l1_between_genders": 0.13617527466843551,
+              "residual_l1": 0.19385261311385457,
+              "scalar_l1_amplification": -0.09642716165493104
+            }
+          },
+          "hitrate@10": 0.8311258278145696,
+          "ineligible_catalog_items": 377,
+          "metrics_by_gender": {
+            "female": {
+              "hitrate@10": 0.783625730994152,
+              "ndcg@10": 0.2784591266012566,
+              "recall@10": 0.04350233950845419,
+              "users": 171
+            },
+            "male": {
+              "hitrate@10": 0.8498845265588915,
+              "ndcg@10": 0.3523333210623503,
+              "recall@10": 0.04792937638881074,
+              "users": 433
+            }
+          },
+          "ndcg@10": 0.3314186070675704,
+          "posthoc_gender_probe": {
+            "protocol": {
+              "classifier": "class-balanced linear logistic regression (limited linear attack)",
+              "fit": "train users only",
+              "model_selection_and_threshold": "validation users only",
+              "positive_class": "female after validation-only orientation",
+              "report": "test users only",
+              "selection": "strongest validation abs(AUC - 0.5); direction invariant"
+            },
+            "selected_l2": 0.1,
+            "selected_threshold": 0.4668497164664752,
+            "test": {
+              "auc": 0.5868819469767568,
+              "auc_distance_from_random": 0.08688194697675677,
+              "balanced_accuracy": 0.5610388558000081,
+              "users": 604
+            },
+            "train_users": 4832,
+            "validation": {
+              "auc": 0.6115432924111665,
+              "auc_distance_from_random": 0.11154329241116645,
+              "balanced_accuracy": 0.6029807004038193,
+              "users": 604
+            }
+          },
+          "recall@10": 0.04667602654354424,
+          "unique_recommended_items": 267,
+          "users_evaluated": 604,
+          "users_total": 604,
+          "users_with_known_binary_gender": 604,
+          "users_with_only_cold_future_positives": 0,
+          "users_without_future_positive": 0
+        },
+        "10": {
+          "absolute_gender_gaps": {
+            "hitrate@10": 0.08685943954449038,
+            "ndcg@10": 0.054391831984302974,
+            "recall@10": 0.010299334370768687
+          },
+          "catalog_items": 3883,
+          "cohort_by_gender": {
+            "female": {
+              "ranking_eligibility_rate": 0.9883040935672515,
+              "ranking_evaluated": 169,
+              "total": 171,
+              "without_future_positive": 2
+            },
+            "male": {
+              "ranking_eligibility_rate": 0.9792147806004619,
+              "ranking_evaluated": 424,
+              "total": 433,
+              "without_future_positive": 9
+            }
+          },
+          "coverage": 0.10211066742726754,
+          "eligible_catalog_items": 3506,
+          "excluded_cold_query_positives": 15,
+          "genre_exposure": {
+            "distribution_by_gender": {
+              "female": {
+                "Action": 0.09485446985446985,
+                "Adventure": 0.055353430353430357,
+                "Animation": 0.029885654885654887,
+                "Children's": 0.04132016632016632,
+                "Comedy": 0.14604989604989604,
+                "Crime": 0.033523908523908526,
+                "Documentary": 0.0010395010395010396,
+                "Drama": 0.21725571725571727,
+                "Fantasy": 0.01975051975051975,
+                "Film-Noir": 0.010135135135135136,
+                "Horror": 0.009095634095634096,
+                "Musical": 0.028326403326403328,
+                "Mystery": 0.016891891891891893,
+                "Romance": 0.07328482328482329,
+                "Sci-Fi": 0.058471933471933475,
+                "Thriller": 0.09485446985446985,
+                "War": 0.06886694386694386,
+                "Western": 0.0010395010395010396
+              },
+              "male": {
+                "Action": 0.14213449712358658,
+                "Adventure": 0.068637175163658,
+                "Animation": 0.02082920055544535,
+                "Children's": 0.024895853997222772,
+                "Comedy": 0.11694108311842888,
+                "Crime": 0.03461614758976394,
+                "Documentary": 0.0012894267010513786,
+                "Drama": 0.19212457845665543,
+                "Fantasy": 0.022317000595120016,
+                "Film-Noir": 0.013291013687760365,
+                "Horror": 0.018250347153342592,
+                "Musical": 0.010315413608411029,
+                "Mystery": 0.015076373735369967,
+                "Romance": 0.04205514778813727,
+                "Sci-Fi": 0.09521920253917873,
+                "Thriller": 0.10910533624280896,
+                "War": 0.07191033525094227,
+                "Western": 0.0009918666931164452
+              }
+            },
+            "female_minus_male_by_genre": {
+              "Action": -0.04728002726911673,
+              "Adventure": -0.013283744810227642,
+              "Animation": 0.009056454330209539,
+              "Children's": 0.01642431232294355,
+              "Comedy": 0.029108812931467165,
+              "Crime": -0.0010922390658554132,
+              "Documentary": -0.00024992566155033905,
+              "Drama": 0.025131138799061842,
+              "Fantasy": -0.002566480844600264,
+              "Film-Noir": -0.0031558785526252294,
+              "Horror": -0.009154713057708496,
+              "Musical": 0.0180109897179923,
+              "Mystery": 0.001815518156521926,
+              "Romance": 0.031229675496686017,
+              "Sci-Fi": -0.03674726906724526,
+              "Thriller": -0.014250866388339112,
+              "War": -0.003043391383998409,
+              "Western": 4.763434638459436e-05
+            },
+            "jensen_shannon_between_genders": 0.01894216102201634,
+            "l1_between_genders": 0.2616490722025338,
+            "normalization": "multi-label genre tag share over hard Top-K items",
+            "preference_amplification": {
+              "amplification_by_genre": {
+                "Action": -0.007121367112564558,
+                "Adventure": 0.0017766734532261297,
+                "Animation": 0.008649464308953973,
+                "Children's": 0.008250919657701316,
+                "Comedy": -0.0007551508234302784,
+                "Crime": 0.005892820400114261,
+                "Documentary": -0.0010526877449718902,
+                "Drama": -0.013218779547139764,
+                "Fantasy": -0.001320732651415914,
+                "Film-Noir": -0.0010837612522209203,
+                "Horror": -0.0017189320211752415,
+                "Musical": 0.012385460601687026,
+                "Mystery": 0.0039369143486411885,
+                "Romance": 0.0014055601514117166,
+                "Sci-Fi": -0.00790959447619996,
+                "Thriller": -0.012753946858396259,
+                "War": 0.0005618880834074094,
+                "Western": 0.004075251482371838
+              },
+              "female_minus_male_history_by_genre": {
+                "Action": -0.04015866015655217,
+                "Adventure": -0.015060418263453772,
+                "Animation": 0.0004069900212555662,
+                "Children's": 0.008173392665242234,
+                "Comedy": 0.029863963754897443,
+                "Crime": -0.006985059465969674,
+                "Documentary": 0.0008027620834215512,
+                "Drama": 0.038349918346201606,
+                "Fantasy": -0.00124574819318435,
+                "Film-Noir": -0.002072117300404309,
+                "Horror": -0.0074357810365332545,
+                "Musical": 0.005625529116305273,
+                "Mystery": -0.0021213961921192626,
+                "Romance": 0.0298241153452743,
+                "Sci-Fi": -0.028837674591045297,
+                "Thriller": -0.0014969195299428528,
+                "War": -0.0036052794674058183,
+                "Western": -0.004027617135987244
+              },
+              "history_l1_between_genders": 0.22609334266519598,
+              "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+              "recommendation_l1_between_genders": 0.2616490722025338,
+              "residual_l1": 0.09386990497502964,
+              "scalar_l1_amplification": 0.03555572953733782
+            }
+          },
+          "hitrate@10": 0.8431703204047217,
+          "ineligible_catalog_items": 377,
+          "metrics_by_gender": {
+            "female": {
+              "hitrate@10": 0.7810650887573964,
+              "ndcg@10": 0.30847622096416333,
+              "recall@10": 0.06356543604031911,
+              "users": 169
+            },
+            "male": {
+              "hitrate@10": 0.8679245283018868,
+              "ndcg@10": 0.3628680529484663,
+              "recall@10": 0.0738647704110878,
+              "users": 424
+            }
+          },
+          "ndcg@10": 0.347366839448724,
+          "posthoc_gender_probe": {
+            "protocol": {
+              "classifier": "class-balanced linear logistic regression (limited linear attack)",
+              "fit": "train users only",
+              "model_selection_and_threshold": "validation users only",
+              "positive_class": "female after validation-only orientation",
+              "report": "test users only",
+              "selection": "strongest validation abs(AUC - 0.5); direction invariant"
+            },
+            "selected_l2": 0.01,
+            "selected_threshold": 0.4373670152429733,
+            "test": {
+              "auc": 0.7433923530921221,
+              "auc_distance_from_random": 0.24339235309212215,
+              "balanced_accuracy": 0.6774982104993045,
+              "users": 604
+            },
+            "train_users": 4832,
+            "validation": {
+              "auc": 0.7523601150682712,
+              "auc_distance_from_random": 0.25236011506827116,
+              "balanced_accuracy": 0.6856556325378496,
+              "users": 604
+            }
+          },
+          "recall@10": 0.07092954695634934,
+          "unique_recommended_items": 358,
+          "users_evaluated": 593,
+          "users_total": 604,
+          "users_with_known_binary_gender": 604,
+          "users_with_only_cold_future_positives": 0,
+          "users_without_future_positive": 11
+        },
+        "20": {
+          "absolute_gender_gaps": {
+            "hitrate@10": 0.08843725335438035,
+            "ndcg@10": 0.052988715038511214,
+            "recall@10": 0.004175748016849529
+          },
+          "catalog_items": 3883,
+          "cohort_by_gender": {
+            "female": {
+              "ranking_eligibility_rate": 0.8187134502923976,
+              "ranking_evaluated": 140,
+              "total": 171,
+              "without_future_positive": 31
+            },
+            "male": {
+              "ranking_eligibility_rate": 0.836027713625866,
+              "ranking_evaluated": 362,
+              "total": 433,
+              "without_future_positive": 71
+            }
+          },
+          "coverage": 0.1417569880205362,
+          "eligible_catalog_items": 3506,
+          "excluded_cold_query_positives": 14,
+          "genre_exposure": {
+            "distribution_by_gender": {
+              "female": {
+                "Action": 0.07352537722908094,
+                "Adventure": 0.039780521262002745,
+                "Animation": 0.040329218106995884,
+                "Children's": 0.04910836762688615,
+                "Comedy": 0.1739368998628258,
+                "Crime": 0.031275720164609055,
+                "Documentary": 0.0021947873799725653,
+                "Drama": 0.21563786008230454,
+                "Fantasy": 0.015912208504801097,
+                "Film-Noir": 0.011248285322359396,
+                "Horror": 0.011522633744855968,
+                "Musical": 0.03539094650205761,
+                "Mystery": 0.01783264746227709,
+                "Romance": 0.08861454046639232,
+                "Sci-Fi": 0.04526748971193416,
+                "Thriller": 0.09135802469135802,
+                "War": 0.05569272976680384,
+                "Western": 0.0013717421124828531
+              },
+              "male": {
+                "Action": 0.1430735056542811,
+                "Adventure": 0.06966882067851374,
+                "Animation": 0.018679321486268174,
+                "Children's": 0.021708400646203555,
+                "Comedy": 0.11954765751211632,
+                "Crime": 0.033723747980613894,
+                "Documentary": 0.0014135702746365104,
+                "Drama": 0.17841276252019386,
+                "Fantasy": 0.022920032310177706,
+                "Film-Noir": 0.015751211631663976,
+                "Horror": 0.02201130856219709,
+                "Musical": 0.009289176090468497,
+                "Mystery": 0.01645799676898223,
+                "Romance": 0.04563812600969305,
+                "Sci-Fi": 0.10167609046849757,
+                "Thriller": 0.11369143780290791,
+                "War": 0.06451938610662358,
+                "Western": 0.0018174474959612278
+              }
+            },
+            "female_minus_male_by_genre": {
+              "Action": -0.06954812842520015,
+              "Adventure": -0.029888299416510992,
+              "Animation": 0.02164989662072771,
+              "Children's": 0.027399966980682592,
+              "Comedy": 0.054389242350709466,
+              "Crime": -0.0024480278160048385,
+              "Documentary": 0.0007812171053360548,
+              "Drama": 0.037225097562110676,
+              "Fantasy": -0.007007823805376609,
+              "Film-Noir": -0.004502926309304579,
+              "Horror": -0.010488674817341124,
+              "Musical": 0.026101770411589113,
+              "Mystery": 0.0013746506932948606,
+              "Romance": 0.042976414456699266,
+              "Sci-Fi": -0.05640860075656341,
+              "Thriller": -0.02233341311154989,
+              "War": -0.008826656339819744,
+              "Western": -0.0004457053834783747
+            },
+            "jensen_shannon_between_genders": 0.04507929002955853,
+            "l1_between_genders": 0.4237965123622995,
+            "normalization": "multi-label genre tag share over hard Top-K items",
+            "preference_amplification": {
+              "amplification_by_genre": {
+                "Action": -0.017675260899655806,
+                "Adventure": -0.01578017613418735,
+                "Animation": 0.018992962783549516,
+                "Children's": 0.01571851048594398,
+                "Comedy": 0.02152400051465747,
+                "Crime": 0.003617897153872063,
+                "Documentary": -0.0014961429773391322,
+                "Drama": -0.008702461067153194,
+                "Fantasy": -0.007708023609241518,
+                "Film-Noir": -0.0045437774811890805,
+                "Horror": 0.0006107658390147788,
+                "Musical": 0.018809527063920084,
+                "Mystery": -4.347444814871426e-05,
+                "Romance": 0.0022538969692235955,
+                "Sci-Fi": -0.015266524008300197,
+                "Thriller": -0.01593132133368297,
+                "War": 0.0006502796491558022,
+                "Western": 0.004969321499560721
+              },
+              "female_minus_male_history_by_genre": {
+                "Action": -0.05187286752554435,
+                "Adventure": -0.014108123282323644,
+                "Animation": 0.002656933837178195,
+                "Children's": 0.011681456494738611,
+                "Comedy": 0.032865241836051995,
+                "Crime": -0.006065924969876901,
+                "Documentary": 0.002277360082675187,
+                "Drama": 0.04592755862926387,
+                "Fantasy": 0.000700199803864909,
+                "Film-Noir": 4.085117188450116e-05,
+                "Horror": -0.011099440656355902,
+                "Musical": 0.007292243347669031,
+                "Mystery": 0.0014181251414435748,
+                "Romance": 0.04072251748747567,
+                "Sci-Fi": -0.041142076748263215,
+                "Thriller": -0.006402091777866922,
+                "War": -0.009476935988975546,
+                "Western": -0.005415026883039097
+              },
+              "history_l1_between_genders": 0.2911649756644911,
+              "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+              "recommendation_l1_between_genders": 0.4237965123622995,
+              "residual_l1": 0.174294323917796,
+              "scalar_l1_amplification": 0.13263153669780836
+            }
+          },
+          "hitrate@10": 0.7709163346613546,
+          "ineligible_catalog_items": 377,
+          "metrics_by_gender": {
+            "female": {
+              "hitrate@10": 0.7071428571428572,
+              "ndcg@10": 0.2515991515811446,
+              "recall@10": 0.04993785607368777,
+              "users": 140
+            },
+            "male": {
+              "hitrate@10": 0.7955801104972375,
+              "ndcg@10": 0.3045878666196558,
+              "recall@10": 0.054113604090537296,
+              "users": 362
+            }
+          },
+          "ndcg@10": 0.2898101373260471,
+          "posthoc_gender_probe": {
+            "protocol": {
+              "classifier": "class-balanced linear logistic regression (limited linear attack)",
+              "fit": "train users only",
+              "model_selection_and_threshold": "validation users only",
+              "positive_class": "female after validation-only orientation",
+              "report": "test users only",
+              "selection": "strongest validation abs(AUC - 0.5); direction invariant"
+            },
+            "selected_l2": 0.001,
+            "selected_threshold": 0.43066547233518504,
+            "test": {
+              "auc": 0.7962940453520252,
+              "auc_distance_from_random": 0.2962940453520252,
+              "balanced_accuracy": 0.7099793363315912,
+              "users": 604
+            },
+            "train_users": 4832,
+            "validation": {
+              "auc": 0.7834096403441244,
+              "auc_distance_from_random": 0.2834096403441244,
+              "balanced_accuracy": 0.7268344070337507,
+              "users": 604
+            }
+          },
+          "recall@10": 0.05294905285077846,
+          "unique_recommended_items": 497,
+          "users_evaluated": 502,
+          "users_total": 604,
+          "users_with_known_binary_gender": 604,
+          "users_with_only_cold_future_positives": 0,
+          "users_without_future_positive": 102
+        },
+        "3": {
+          "absolute_gender_gaps": {
+            "hitrate@10": 0.04409599827127475,
+            "ndcg@10": 0.06938039582523708,
+            "recall@10": 0.0021588369387882528
+          },
+          "catalog_items": 3883,
+          "cohort_by_gender": {
+            "female": {
+              "ranking_eligibility_rate": 1.0,
+              "ranking_evaluated": 171,
+              "total": 171,
+              "without_future_positive": 0
+            },
+            "male": {
+              "ranking_eligibility_rate": 1.0,
+              "ranking_evaluated": 433,
+              "total": 433,
+              "without_future_positive": 0
+            }
+          },
+          "coverage": 0.07472903593839134,
+          "eligible_catalog_items": 3506,
+          "excluded_cold_query_positives": 17,
+          "genre_exposure": {
+            "distribution_by_gender": {
+              "female": {
+                "Action": 0.1190246257846451,
+                "Adventure": 0.07436021245774987,
+                "Animation": 0.013520038628681796,
+                "Children's": 0.02704007725736359,
+                "Comedy": 0.12626750362143893,
+                "Crime": 0.0294543698696282,
+                "Documentary": 0.0009657170449058426,
+                "Drama": 0.22163206180589087,
+                "Fantasy": 0.02921294060840174,
+                "Film-Noir": 0.005552873008208595,
+                "Horror": 0.006277160791887977,
+                "Musical": 0.012071463061323033,
+                "Mystery": 0.010381458232737808,
+                "Romance": 0.07532592950265572,
+                "Sci-Fi": 0.08329309512312892,
+                "Thriller": 0.08377595364558184,
+                "War": 0.0816030902945437,
+                "Western": 0.00024142926122646064
+              },
+              "male": {
+                "Action": 0.1566622979467016,
+                "Adventure": 0.09480122324159021,
+                "Animation": 0.011970292704237658,
+                "Children's": 0.025425950196592398,
+                "Comedy": 0.08859764089121887,
+                "Crime": 0.02979467016164264,
+                "Documentary": 0.00043687199650502403,
+                "Drama": 0.19781564001747487,
+                "Fantasy": 0.03494975972040192,
+                "Film-Noir": 0.005504587155963303,
+                "Horror": 0.005941459152468327,
+                "Musical": 0.008999563128003495,
+                "Mystery": 0.007863695937090432,
+                "Romance": 0.04255133245958934,
+                "Sci-Fi": 0.11533420707732635,
+                "Thriller": 0.08484054172127567,
+                "War": 0.08772389689820882,
+                "Western": 0.0007863695937090433
+              }
+            },
+            "female_minus_male_by_genre": {
+              "Action": -0.03763767216205652,
+              "Adventure": -0.020441010783840335,
+              "Animation": 0.0015497459244441375,
+              "Children's": 0.0016141270607711936,
+              "Comedy": 0.03766986273022006,
+              "Crime": -0.00034030029201443865,
+              "Documentary": 0.0005288450484008185,
+              "Drama": 0.023816421788416003,
+              "Fantasy": -0.005736819112000184,
+              "Film-Noir": 4.828585224529204e-05,
+              "Horror": 0.0003357016394196499,
+              "Musical": 0.0030718999333195374,
+              "Mystery": 0.002517762295647376,
+              "Romance": 0.03277459704306638,
+              "Sci-Fi": -0.032041111954197427,
+              "Thriller": -0.0010645880756938314,
+              "War": -0.006120806603665124,
+              "Western": -0.0005449403324825826
+            },
+            "jensen_shannon_between_genders": 0.01163205309266387,
+            "l1_between_genders": 0.2078544986319009,
+            "normalization": "multi-label genre tag share over hard Top-K items",
+            "preference_amplification": {
+              "amplification_by_genre": {
+                "Action": -0.005557776190704841,
+                "Adventure": 0.0011516157724790616,
+                "Animation": 0.003991324325311395,
+                "Children's": -0.0038053505276140313,
+                "Comedy": 0.018815109829032325,
+                "Crime": -0.0007453250609495664,
+                "Documentary": 0.0014356081707490712,
+                "Drama": -0.007107307241221439,
+                "Fantasy": 0.0008508413482920009,
+                "Film-Noir": -0.0006292953820369179,
+                "Horror": 0.008775280706731427,
+                "Musical": 0.0037272077360249976,
+                "Mystery": 0.002375329562143416,
+                "Romance": 0.0026893454837063693,
+                "Sci-Fi": -0.00581062941495588,
+                "Thriller": -0.008337156556971106,
+                "War": -0.015512867942351113,
+                "Western": 0.0036940453823348473
+              },
+              "female_minus_male_history_by_genre": {
+                "Action": -0.03207989597135168,
+                "Adventure": -0.021592626556319397,
+                "Animation": -0.0024415784008672576,
+                "Children's": 0.005419477588385225,
+                "Comedy": 0.018854752901187738,
+                "Crime": 0.00040502476893512773,
+                "Documentary": -0.0009067631223482527,
+                "Drama": 0.030923729029637442,
+                "Fantasy": -0.006587660460292185,
+                "Film-Noir": 0.00067758123428221,
+                "Horror": -0.008439579067311777,
+                "Musical": -0.0006553078027054602,
+                "Mystery": 0.00014243273350396032,
+                "Romance": 0.03008525155936001,
+                "Sci-Fi": -0.026230482539241547,
+                "Thriller": 0.007272568481277275,
+                "War": 0.00939206133868599,
+                "Western": -0.00423898571481743
+              },
+              "history_l1_between_genders": 0.20634575927050994,
+              "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+              "recommendation_l1_between_genders": 0.2078544986319009,
+              "residual_l1": 0.0950114166336098,
+              "scalar_l1_amplification": 0.0015087393613909539
+            }
+          },
+          "hitrate@10": 0.8327814569536424,
+          "ineligible_catalog_items": 377,
+          "metrics_by_gender": {
+            "female": {
+              "hitrate@10": 0.8011695906432749,
+              "ndcg@10": 0.30861954655281537,
+              "recall@10": 0.053657900040553236,
+              "users": 171
+            },
+            "male": {
+              "hitrate@10": 0.8452655889145496,
+              "ndcg@10": 0.37799994237805246,
+              "recall@10": 0.05581673697934149,
+              "users": 433
+            }
+          },
+          "ndcg@10": 0.35835747932156975,
+          "posthoc_gender_probe": {
+            "protocol": {
+              "classifier": "class-balanced linear logistic regression (limited linear attack)",
+              "fit": "train users only",
+              "model_selection_and_threshold": "validation users only",
+              "positive_class": "female after validation-only orientation",
+              "report": "test users only",
+              "selection": "strongest validation abs(AUC - 0.5); direction invariant"
+            },
+            "selected_l2": 0.1,
+            "selected_threshold": 0.42008401505600157,
+            "test": {
+              "auc": 0.6328147157732669,
+              "auc_distance_from_random": 0.13281471577326687,
+              "balanced_accuracy": 0.607207973744986,
+              "users": 604
+            },
+            "train_users": 4832,
+            "validation": {
+              "auc": 0.6816039328498305,
+              "auc_distance_from_random": 0.18160393284983045,
+              "balanced_accuracy": 0.6419985683994436,
+              "users": 604
+            }
+          },
+          "recall@10": 0.05520554307779712,
+          "unique_recommended_items": 262,
+          "users_evaluated": 604,
+          "users_total": 604,
+          "users_with_known_binary_gender": 604,
+          "users_with_only_cold_future_positives": 0,
+          "users_without_future_positive": 0
+        },
+        "5": {
+          "absolute_gender_gaps": {
+            "hitrate@10": 0.04946393762183243,
+            "ndcg@10": 0.08497440486063895,
+            "recall@10": 0.011935537995538197
+          },
+          "catalog_items": 3883,
+          "cohort_by_gender": {
+            "female": {
+              "ranking_eligibility_rate": 1.0,
+              "ranking_evaluated": 171,
+              "total": 171,
+              "without_future_positive": 0
+            },
+            "male": {
+              "ranking_eligibility_rate": 0.9976905311778291,
+              "ranking_evaluated": 432,
+              "total": 433,
+              "without_future_positive": 1
+            }
+          },
+          "coverage": 0.0775812892184826,
+          "eligible_catalog_items": 3506,
+          "excluded_cold_query_positives": 16,
+          "genre_exposure": {
+            "distribution_by_gender": {
+              "female": {
+                "Action": 0.11176183504148365,
+                "Adventure": 0.07027818448023426,
+                "Animation": 0.01683748169838946,
+                "Children's": 0.02855051244509517,
+                "Comedy": 0.12542703757930698,
+                "Crime": 0.0314787701317716,
+                "Documentary": 0.0002440214738897023,
+                "Drama": 0.23182040019521719,
+                "Fantasy": 0.025866276232308444,
+                "Film-Noir": 0.006588579795021962,
+                "Horror": 0.005368472425573451,
+                "Musical": 0.012445095168374817,
+                "Mystery": 0.009272816007808687,
+                "Romance": 0.07198633479746218,
+                "Sci-Fi": 0.07613469985358712,
+                "Thriller": 0.08735968765251342,
+                "War": 0.08735968765251342,
+                "Western": 0.0012201073694485115
+              },
+              "male": {
+                "Action": 0.15313838024961282,
+                "Adventure": 0.08727338981506787,
+                "Animation": 0.014667031064953994,
+                "Children's": 0.02441468525097932,
+                "Comedy": 0.09620114785460508,
+                "Crime": 0.030609456135556164,
+                "Documentary": 0.00045549785916006196,
+                "Drama": 0.20051015760225926,
+                "Fantasy": 0.029334062129907988,
+                "Film-Noir": 0.008290061036713127,
+                "Horror": 0.008654459324041177,
+                "Musical": 0.008563359752209164,
+                "Mystery": 0.010020952901521362,
+                "Romance": 0.040357110321581485,
+                "Sci-Fi": 0.10795299262093468,
+                "Thriller": 0.09419695727430082,
+                "War": 0.08481370137560354,
+                "Western": 0.0005465974309920743
+              }
+            },
+            "female_minus_male_by_genre": {
+              "Action": -0.04137654520812917,
+              "Adventure": -0.016995205334833605,
+              "Animation": 0.0021704506334354647,
+              "Children's": 0.00413582719411585,
+              "Comedy": 0.0292258897247019,
+              "Crime": 0.0008693139962154331,
+              "Documentary": -0.00021147638527035966,
+              "Drama": 0.03131024259295792,
+              "Fantasy": -0.0034677858975995443,
+              "Film-Noir": -0.0017014812416911648,
+              "Horror": -0.0032859868984677267,
+              "Musical": 0.003881735416165653,
+              "Mystery": -0.000748136893712675,
+              "Romance": 0.03162922447588069,
+              "Sci-Fi": -0.03181829276734756,
+              "Thriller": -0.006837269621787392,
+              "War": 0.002545986276909884,
+              "Western": 0.0006735099384564372
+            },
+            "jensen_shannon_between_genders": 0.011564638477787024,
+            "l1_between_genders": 0.21288436049767842,
+            "normalization": "multi-label genre tag share over hard Top-K items",
+            "preference_amplification": {
+              "amplification_by_genre": {
+                "Action": -0.0036017627740645014,
+                "Adventure": 0.004055488960502791,
+                "Animation": 0.005837168037031921,
+                "Children's": -0.0005060810083094523,
+                "Comedy": 0.007844961678735399,
+                "Crime": 0.007268880629526908,
+                "Documentary": -0.0015517415792928163,
+                "Drama": -0.005827569518738168,
+                "Fantasy": 0.0015117640330374795,
+                "Film-Noir": 0.00047206568061246203,
+                "Horror": 0.003988184088072326,
+                "Musical": 0.0011167077838305263,
+                "Mystery": 0.00026548278882076136,
+                "Romance": -0.0004914190690217812,
+                "Sci-Fi": -0.006139580227551379,
+                "Thriller": -0.016454676517109773,
+                "War": -0.0009363419346943708,
+                "Western": 0.003148468948611733
+              },
+              "female_minus_male_history_by_genre": {
+                "Action": -0.037774782434064666,
+                "Adventure": -0.021050694295336396,
+                "Animation": -0.0036667174035964565,
+                "Children's": 0.004641908202425302,
+                "Comedy": 0.021380928045966502,
+                "Crime": -0.006399566633311475,
+                "Documentary": 0.0013402651940224567,
+                "Drama": 0.03713781211169609,
+                "Fantasy": -0.004979549930637024,
+                "Film-Noir": -0.002173546922303627,
+                "Horror": -0.007274170986540053,
+                "Musical": 0.0027650276323351267,
+                "Mystery": -0.0010136196825334363,
+                "Romance": 0.032120643544902475,
+                "Sci-Fi": -0.02567871253979618,
+                "Thriller": 0.00961740689532238,
+                "War": 0.0034823282116042548,
+                "Western": -0.002474959010155296
+              },
+              "history_l1_between_genders": 0.2249726396765492,
+              "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+              "recommendation_l1_between_genders": 0.21288436049767842,
+              "residual_l1": 0.07101834525756455,
+              "scalar_l1_amplification": -0.012088279178870787
+            }
+          },
+          "hitrate@10": 0.8424543946932007,
+          "ineligible_catalog_items": 377,
+          "metrics_by_gender": {
+            "female": {
+              "hitrate@10": 0.8070175438596491,
+              "ndcg@10": 0.3084651419511592,
+              "recall@10": 0.05400290486750998,
+              "users": 171
+            },
+            "male": {
+              "hitrate@10": 0.8564814814814815,
+              "ndcg@10": 0.39343954681179816,
+              "recall@10": 0.06593844286304817,
+              "users": 432
+            }
+          },
+          "ndcg@10": 0.3693423275229603,
+          "posthoc_gender_probe": {
+            "protocol": {
+              "classifier": "class-balanced linear logistic regression (limited linear attack)",
+              "fit": "train users only",
+              "model_selection_and_threshold": "validation users only",
+              "positive_class": "female after validation-only orientation",
+              "report": "test users only",
+              "selection": "strongest validation abs(AUC - 0.5); direction invariant"
+            },
+            "selected_l2": 0.01,
+            "selected_threshold": 0.440483510974233,
+            "test": {
+              "auc": 0.6858717231878774,
+              "auc_distance_from_random": 0.18587172318787737,
+              "balanced_accuracy": 0.6165403886930567,
+              "users": 604
+            },
+            "train_users": 4832,
+            "validation": {
+              "auc": 0.7179881960482423,
+              "auc_distance_from_random": 0.21798819604824227,
+              "balanced_accuracy": 0.6694893507826534,
+              "users": 604
+            }
+          },
+          "recall@10": 0.06255373805834333,
+          "unique_recommended_items": 272,
+          "users_evaluated": 603,
+          "users_total": 604,
+          "users_with_known_binary_gender": 604,
+          "users_with_only_cold_future_positives": 0,
+          "users_without_future_positive": 1
+        }
+      }
+    },
+    "ItemKNN": {
+      "1": {
+        "absolute_gender_gaps": {
+          "hitrate@10": 0.0952689653309563,
+          "ndcg@10": 0.08366174383250644,
+          "recall@10": 0.007215241734324928
+        },
+        "catalog_items": 3883,
+        "cohort_by_gender": {
+          "female": {
+            "ranking_eligibility_rate": 1.0,
+            "ranking_evaluated": 171,
+            "total": 171,
+            "without_future_positive": 0
+          },
+          "male": {
+            "ranking_eligibility_rate": 1.0,
+            "ranking_evaluated": 433,
+            "total": 433,
+            "without_future_positive": 0
+          }
+        },
+        "coverage": 0.2567027952082145,
+        "eligible_catalog_items": 3506,
+        "excluded_cold_query_positives": 18,
+        "genre_exposure": {
+          "distribution_by_gender": {
+            "female": {
+              "Action": 0.12522407170294494,
+              "Adventure": 0.06811779769526248,
+              "Animation": 0.007426376440460947,
+              "Children's": 0.019206145966709345,
+              "Comedy": 0.12291933418693982,
+              "Crime": 0.0499359795134443,
+              "Documentary": 0.00025608194622279127,
+              "Drama": 0.19769526248399488,
+              "Fantasy": 0.016901408450704224,
+              "Film-Noir": 0.00998719590268886,
+              "Horror": 0.016645326504481434,
+              "Musical": 0.015108834827144686,
+              "Mystery": 0.01741357234314981,
+              "Romance": 0.08040973111395647,
+              "Sci-Fi": 0.07631241997439181,
+              "Thriller": 0.11549295774647887,
+              "War": 0.058898847631242,
+              "Western": 0.00204865556978233
+            },
+            "male": {
+              "Action": 0.15372745684251132,
+              "Adventure": 0.08216800077153052,
+              "Animation": 0.011380075224226058,
+              "Children's": 0.01687723020542,
+              "Comedy": 0.10521747516636126,
+              "Crime": 0.04908862956890732,
+              "Documentary": 0.0037612113029221717,
+              "Drama": 0.16298582312662746,
+              "Fantasy": 0.021795737293856688,
+              "Film-Noir": 0.010704986016009258,
+              "Horror": 0.016009258366284116,
+              "Musical": 0.01475552126531006,
+              "Mystery": 0.01408043205709326,
+              "Romance": 0.05699681743658983,
+              "Sci-Fi": 0.09943099623878869,
+              "Thriller": 0.11505448934323464,
+              "War": 0.05989005690037612,
+              "Western": 0.0060758028739512
+            }
+          },
+          "female_minus_male_by_genre": {
+            "Action": -0.02850338513956638,
+            "Adventure": -0.014050203076268045,
+            "Animation": -0.00395369878376511,
+            "Children's": 0.002328915761289345,
+            "Comedy": 0.017701859020578553,
+            "Crime": 0.0008473499445369806,
+            "Documentary": -0.0035051293566993806,
+            "Drama": 0.03470943935736742,
+            "Fantasy": -0.004894328843152464,
+            "Film-Noir": -0.0007177901133203976,
+            "Horror": 0.0006360681381973182,
+            "Musical": 0.00035331356183462663,
+            "Mystery": 0.00333314028605655,
+            "Romance": 0.023412913677366635,
+            "Sci-Fi": -0.02311857626439688,
+            "Thriller": 0.0004384684032442271,
+            "War": -0.0009912092691341176,
+            "Western": -0.004027147304168871
+          },
+          "jensen_shannon_between_genders": 0.008577904788090816,
+          "l1_between_genders": 0.1675229363009433,
+          "normalization": "multi-label genre tag share over hard Top-K items",
+          "preference_amplification": {
+            "amplification_by_genre": {
+              "Action": -0.006687216811770133,
+              "Adventure": 0.02406718341321147,
+              "Animation": 0.004211675893237475,
+              "Children's": -0.0005208442977730383,
+              "Comedy": 0.01598166706782847,
+              "Crime": -0.010426182724344528,
+              "Documentary": 0.0012567754052053817,
+              "Drama": -0.037435263485009834,
+              "Fantasy": 0.002732101573975628,
+              "Film-Noir": -0.0064246930295256376,
+              "Horror": 0.0029542667354656837,
+              "Musical": 0.004709164429313402,
+              "Mystery": -0.007674611651927945,
+              "Romance": 0.02277061024436553,
+              "Sci-Fi": -0.0006453389074385849,
+              "Thriller": -0.008915536764714432,
+              "War": -0.002593276452596653,
+              "Western": 0.0026395193624977964
+            },
+            "female_minus_male_history_by_genre": {
+              "Action": -0.021816168327796245,
+              "Adventure": -0.038117386489479516,
+              "Animation": -0.008165374677002585,
+              "Children's": 0.0028497600590623832,
+              "Comedy": 0.001720191952750083,
+              "Crime": 0.011273532668881509,
+              "Documentary": -0.004761904761904762,
+              "Drama": 0.07214470284237726,
+              "Fantasy": -0.0076264304171280925,
+              "Film-Noir": 0.00570690291620524,
+              "Horror": -0.0023181985972683655,
+              "Musical": -0.004355850867478775,
+              "Mystery": 0.011007751937984495,
+              "Romance": 0.000642303433001104,
+              "Sci-Fi": -0.022473237356958296,
+              "Thriller": 0.00935400516795866,
+              "War": 0.0016020671834625355,
+              "Western": -0.006666666666666667
+            },
+            "history_l1_between_genders": 0.23260243632336655,
+            "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+            "recommendation_l1_between_genders": 0.1675229363009433,
+            "residual_l1": 0.16264592825020163,
+            "scalar_l1_amplification": -0.06507950002242324
+          }
+        },
+        "hitrate@10": 0.6589403973509934,
+        "ineligible_catalog_items": 377,
+        "metrics_by_gender": {
+          "female": {
+            "hitrate@10": 0.5906432748538012,
+            "ndcg@10": 0.19531618998042985,
+            "recall@10": 0.026606989275095225,
+            "users": 171
+          },
+          "male": {
+            "hitrate@10": 0.6859122401847575,
+            "ndcg@10": 0.2789779338129363,
+            "recall@10": 0.03382223100942015,
+            "users": 433
+          }
+        },
+        "ndcg@10": 0.25529224143651474,
+        "recall@10": 0.031779505286622864,
+        "unique_recommended_items": 900,
+        "users_evaluated": 604,
+        "users_total": 604,
+        "users_with_known_binary_gender": 604,
+        "users_with_only_cold_future_positives": 0,
+        "users_without_future_positive": 0
+      },
+      "10": {
+        "absolute_gender_gaps": {
+          "hitrate@10": 0.09997767109523281,
+          "ndcg@10": 0.10881767555897526,
+          "recall@10": 0.020075085281032995
+        },
+        "catalog_items": 3883,
+        "cohort_by_gender": {
+          "female": {
+            "ranking_eligibility_rate": 0.9883040935672515,
+            "ranking_evaluated": 169,
+            "total": 171,
+            "without_future_positive": 2
+          },
+          "male": {
+            "ranking_eligibility_rate": 0.9792147806004619,
+            "ranking_evaluated": 424,
+            "total": 433,
+            "without_future_positive": 9
+          }
+        },
+        "coverage": 0.04535082715345123,
+        "eligible_catalog_items": 3506,
+        "excluded_cold_query_positives": 15,
+        "genre_exposure": {
+          "distribution_by_gender": {
+            "female": {
+              "Action": 0.13503732187287945,
+              "Adventure": 0.08753675638995702,
+              "Animation": 0.006107215562090025,
+              "Children's": 0.019226419362135264,
+              "Comedy": 0.08482243836236146,
+              "Crime": 0.08889391540375481,
+              "Documentary": 0.00022619316896629722,
+              "Drama": 0.19316896629721783,
+              "Fantasy": 0.02601221443112418,
+              "Film-Noir": 0.01854783985523637,
+              "Horror": 0.009500113096584483,
+              "Musical": 0.008595340420719294,
+              "Mystery": 0.019226419362135264,
+              "Romance": 0.040488577244967204,
+              "Sci-Fi": 0.08391766568649627,
+              "Thriller": 0.1223705044107668,
+              "War": 0.05609590590364171,
+              "Western": 0.00022619316896629722
+            },
+            "male": {
+              "Action": 0.17567105488117626,
+              "Adventure": 0.09275089758933151,
+              "Animation": 0.0038468114207556845,
+              "Children's": 0.011711403658745085,
+              "Comedy": 0.06163446743032997,
+              "Crime": 0.06864421268592921,
+              "Documentary": 8.548469823901521e-05,
+              "Drama": 0.16678064626431868,
+              "Fantasy": 0.026072832962899643,
+              "Film-Noir": 0.015729184475978798,
+              "Horror": 0.014788852795349633,
+              "Musical": 0.005641990083775005,
+              "Mystery": 0.015985638570695845,
+              "Romance": 0.026072832962899643,
+              "Sci-Fi": 0.11711403658745084,
+              "Thriller": 0.13173191998632244,
+              "War": 0.06531030945460763,
+              "Western": 0.00042742349119507606
+            }
+          },
+          "female_minus_male_by_genre": {
+            "Action": -0.04063373300829681,
+            "Adventure": -0.005214141199374495,
+            "Animation": 0.00226040414133434,
+            "Children's": 0.007515015703390179,
+            "Comedy": 0.02318797093203149,
+            "Crime": 0.0202497027178256,
+            "Documentary": 0.000140708470727282,
+            "Drama": 0.02638832003289915,
+            "Fantasy": -6.0618531775462337e-05,
+            "Film-Noir": 0.002818655379257573,
+            "Horror": -0.0052887396987651505,
+            "Musical": 0.0029533503369442897,
+            "Mystery": 0.0032407807914394196,
+            "Romance": 0.014415744282067561,
+            "Sci-Fi": -0.03319637090095458,
+            "Thriller": -0.009361415575555643,
+            "War": -0.009214403550965915,
+            "Western": -0.00020123032222877884
+          },
+          "jensen_shannon_between_genders": 0.01017509884475307,
+          "l1_between_genders": 0.20634130557583372,
+          "normalization": "multi-label genre tag share over hard Top-K items",
+          "preference_amplification": {
+            "amplification_by_genre": {
+              "Action": -0.0004750728517446401,
+              "Adventure": 0.009846277064079277,
+              "Animation": 0.001853414120078774,
+              "Children's": -0.000658376961852055,
+              "Comedy": -0.006675992822865955,
+              "Crime": 0.027234762183795273,
+              "Documentary": -0.0006620536126942691,
+              "Drama": -0.011961598313302457,
+              "Fantasy": 0.0011851296614088878,
+              "Film-Noir": 0.004890772679661882,
+              "Horror": 0.002147041337768104,
+              "Musical": -0.0026721787793609836,
+              "Mystery": 0.005362176983558682,
+              "Romance": -0.015408371063206739,
+              "Sci-Fi": -0.004358696309909281,
+              "Thriller": -0.00786449604561279,
+              "War": -0.005609124083560096,
+              "Western": 0.003826386813758465
+            },
+            "female_minus_male_history_by_genre": {
+              "Action": -0.04015866015655217,
+              "Adventure": -0.015060418263453772,
+              "Animation": 0.0004069900212555662,
+              "Children's": 0.008173392665242234,
+              "Comedy": 0.029863963754897443,
+              "Crime": -0.006985059465969674,
+              "Documentary": 0.0008027620834215512,
+              "Drama": 0.038349918346201606,
+              "Fantasy": -0.00124574819318435,
+              "Film-Noir": -0.002072117300404309,
+              "Horror": -0.0074357810365332545,
+              "Musical": 0.005625529116305273,
+              "Mystery": -0.0021213961921192626,
+              "Romance": 0.0298241153452743,
+              "Sci-Fi": -0.028837674591045297,
+              "Thriller": -0.0014969195299428528,
+              "War": -0.0036052794674058183,
+              "Western": -0.004027617135987244
+            },
+            "history_l1_between_genders": 0.22609334266519598,
+            "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+            "recommendation_l1_between_genders": 0.20634130557583372,
+            "residual_l1": 0.11269192168821862,
+            "scalar_l1_amplification": -0.019752037089362268
+          }
+        },
+        "hitrate@10": 0.8111298482293423,
+        "ineligible_catalog_items": 377,
+        "metrics_by_gender": {
+          "female": {
+            "hitrate@10": 0.7396449704142012,
+            "ndcg@10": 0.28372916298287487,
+            "recall@10": 0.04681285460269363,
+            "users": 169
+          },
+          "male": {
+            "hitrate@10": 0.839622641509434,
+            "ndcg@10": 0.39254683854185013,
+            "recall@10": 0.06688793988372663,
+            "users": 424
+          }
+        },
+        "ndcg@10": 0.36153471852588587,
+        "recall@10": 0.061166709845793116,
+        "unique_recommended_items": 159,
+        "users_evaluated": 593,
+        "users_total": 604,
+        "users_with_known_binary_gender": 604,
+        "users_with_only_cold_future_positives": 0,
+        "users_without_future_positive": 11
+      },
+      "20": {
+        "absolute_gender_gaps": {
+          "hitrate@10": 0.024151539068666072,
+          "ndcg@10": 0.0875393477713553,
+          "recall@10": 0.0044787242348634584
+        },
+        "catalog_items": 3883,
+        "cohort_by_gender": {
+          "female": {
+            "ranking_eligibility_rate": 0.8187134502923976,
+            "ranking_evaluated": 140,
+            "total": 171,
+            "without_future_positive": 31
+          },
+          "male": {
+            "ranking_eligibility_rate": 0.836027713625866,
+            "ranking_evaluated": 362,
+            "total": 433,
+            "without_future_positive": 71
+          }
+        },
+        "coverage": 0.04420992584141472,
+        "eligible_catalog_items": 3506,
+        "excluded_cold_query_positives": 14,
+        "genre_exposure": {
+          "distribution_by_gender": {
+            "female": {
+              "Action": 0.1304445442299057,
+              "Adventure": 0.0862146385271666,
+              "Animation": 0.00898069151324652,
+              "Children's": 0.022676246070947464,
+              "Comedy": 0.09631791647956893,
+              "Crime": 0.08419398293668612,
+              "Documentary": 0.0,
+              "Drama": 0.18185900314324202,
+              "Fantasy": 0.025819488100583744,
+              "Film-Noir": 0.020431073192635832,
+              "Horror": 0.01122586439155815,
+              "Musical": 0.011674898967220475,
+              "Mystery": 0.020655590480466997,
+              "Romance": 0.047597665020206556,
+              "Sci-Fi": 0.08441850022451729,
+              "Thriller": 0.11427929950606197,
+              "War": 0.05298607992815447,
+              "Western": 0.000224517287831163
+            },
+            "male": {
+              "Action": 0.18076792388718993,
+              "Adventure": 0.09590553856608902,
+              "Animation": 0.004926945293917771,
+              "Children's": 0.012572205232755691,
+              "Comedy": 0.06583418280665987,
+              "Crime": 0.06591913013931362,
+              "Documentary": 0.0,
+              "Drama": 0.15502888209310228,
+              "Fantasy": 0.025399252463472646,
+              "Film-Noir": 0.015375467210329596,
+              "Horror": 0.0163098878695209,
+              "Musical": 0.0056065239551478085,
+              "Mystery": 0.014441046551138294,
+              "Romance": 0.028287461773700305,
+              "Sci-Fi": 0.12062521236833164,
+              "Thriller": 0.1300543662928984,
+              "War": 0.06252123683316343,
+              "Western": 0.00042473666326877334
+            }
+          },
+          "female_minus_male_by_genre": {
+            "Action": -0.05032337965728423,
+            "Adventure": -0.009690900038922423,
+            "Animation": 0.00405374621932875,
+            "Children's": 0.010104040838191773,
+            "Comedy": 0.03048373367290906,
+            "Crime": 0.018274852797372496,
+            "Documentary": 0.0,
+            "Drama": 0.026830121050139738,
+            "Fantasy": 0.00042023563711109796,
+            "Film-Noir": 0.005055605982306236,
+            "Horror": -0.0050840234779627475,
+            "Musical": 0.006068375012072667,
+            "Mystery": 0.006214543929328704,
+            "Romance": 0.01931020324650625,
+            "Sci-Fi": -0.03620671214381435,
+            "Thriller": -0.015775066786836434,
+            "War": -0.009535156905008967,
+            "Western": -0.00020021937543761035
+          },
+          "jensen_shannon_between_genders": 0.014849668186616635,
+          "l1_between_genders": 0.2536309167705335,
+          "normalization": "multi-label genre tag share over hard Top-K items",
+          "preference_amplification": {
+            "amplification_by_genre": {
+              "Action": 0.0015494878682601188,
+              "Adventure": 0.004417223243401221,
+              "Animation": 0.001396812382150555,
+              "Children's": -0.0015774156565468381,
+              "Comedy": -0.002381508163142934,
+              "Crime": 0.024340777767249397,
+              "Documentary": -0.002277360082675187,
+              "Drama": -0.019097437579124132,
+              "Fantasy": -0.000279964166753811,
+              "Film-Noir": 0.005014754810421735,
+              "Horror": 0.006015417178393155,
+              "Musical": -0.0012238683355963644,
+              "Mystery": 0.004796418787885129,
+              "Romance": -0.02141231424096942,
+              "Sci-Fi": 0.004935364604448864,
+              "Thriller": -0.009372975008969511,
+              "War": -5.8220916033420445e-05,
+              "Western": 0.005214807507601486
+            },
+            "female_minus_male_history_by_genre": {
+              "Action": -0.05187286752554435,
+              "Adventure": -0.014108123282323644,
+              "Animation": 0.002656933837178195,
+              "Children's": 0.011681456494738611,
+              "Comedy": 0.032865241836051995,
+              "Crime": -0.006065924969876901,
+              "Documentary": 0.002277360082675187,
+              "Drama": 0.04592755862926387,
+              "Fantasy": 0.000700199803864909,
+              "Film-Noir": 4.085117188450116e-05,
+              "Horror": -0.011099440656355902,
+              "Musical": 0.007292243347669031,
+              "Mystery": 0.0014181251414435748,
+              "Romance": 0.04072251748747567,
+              "Sci-Fi": -0.041142076748263215,
+              "Thriller": -0.006402091777866922,
+              "War": -0.009476935988975546,
+              "Western": -0.005415026883039097
+            },
+            "history_l1_between_genders": 0.2911649756644911,
+            "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+            "recommendation_l1_between_genders": 0.2536309167705335,
+            "residual_l1": 0.11536212829962326,
+            "scalar_l1_amplification": -0.03753405889395761
+          }
+        },
+        "hitrate@10": 0.7888446215139442,
+        "ineligible_catalog_items": 377,
+        "metrics_by_gender": {
+          "female": {
+            "hitrate@10": 0.7714285714285715,
+            "ndcg@10": 0.2758605587563239,
+            "recall@10": 0.049040034578995556,
+            "users": 140
+          },
+          "male": {
+            "hitrate@10": 0.7955801104972375,
+            "ndcg@10": 0.36339990652767923,
+            "recall@10": 0.053518758813859015,
+            "users": 362
+          }
+        },
+        "ndcg@10": 0.3389865426073809,
+        "recall@10": 0.05226971221449471,
+        "unique_recommended_items": 155,
+        "users_evaluated": 502,
+        "users_total": 604,
+        "users_with_known_binary_gender": 604,
+        "users_with_only_cold_future_positives": 0,
+        "users_without_future_positive": 102
+      },
+      "3": {
+        "absolute_gender_gaps": {
+          "hitrate@10": 0.07731993571303164,
+          "ndcg@10": 0.09390160216251792,
+          "recall@10": 0.005364280946598493
+        },
+        "catalog_items": 3883,
+        "cohort_by_gender": {
+          "female": {
+            "ranking_eligibility_rate": 1.0,
+            "ranking_evaluated": 171,
+            "total": 171,
+            "without_future_positive": 0
+          },
+          "male": {
+            "ranking_eligibility_rate": 1.0,
+            "ranking_evaluated": 433,
+            "total": 433,
+            "without_future_positive": 0
+          }
+        },
+        "coverage": 0.08328579577866514,
+        "eligible_catalog_items": 3506,
+        "excluded_cold_query_positives": 17,
+        "genre_exposure": {
+          "distribution_by_gender": {
+            "female": {
+              "Action": 0.15052508751458576,
+              "Adventure": 0.08168028004667445,
+              "Animation": 0.003500583430571762,
+              "Children's": 0.015635939323220535,
+              "Comedy": 0.09568261376896149,
+              "Crime": 0.06931155192532089,
+              "Documentary": 0.0,
+              "Drama": 0.1969661610268378,
+              "Fantasy": 0.024737456242707116,
+              "Film-Noir": 0.011901983663943991,
+              "Horror": 0.010501750291715286,
+              "Musical": 0.00956826137689615,
+              "Mystery": 0.0147024504084014,
+              "Romance": 0.050175029171528586,
+              "Sci-Fi": 0.09101516919486581,
+              "Thriller": 0.11411901983663944,
+              "War": 0.05974329054842474,
+              "Western": 0.00023337222870478414
+            },
+            "male": {
+              "Action": 0.18706501442878967,
+              "Adventure": 0.10286878288915295,
+              "Animation": 0.003904260736717026,
+              "Children's": 0.014259039212357834,
+              "Comedy": 0.06637243252418944,
+              "Crime": 0.057800033950093366,
+              "Documentary": 0.0,
+              "Drama": 0.16228144627397725,
+              "Fantasy": 0.027923951790867426,
+              "Film-Noir": 0.009760651841792565,
+              "Horror": 0.012391784077406213,
+              "Musical": 0.00772364624002716,
+              "Mystery": 0.011033780342895943,
+              "Romance": 0.03310134102868783,
+              "Sci-Fi": 0.11848582583602105,
+              "Thriller": 0.1158546936004074,
+              "War": 0.06756068579188593,
+              "Western": 0.0016126294347309454
+            }
+          },
+          "female_minus_male_by_genre": {
+            "Action": -0.03653992691420391,
+            "Adventure": -0.0211885028424785,
+            "Animation": -0.00040367730614526394,
+            "Children's": 0.0013769001108627013,
+            "Comedy": 0.029310181244772054,
+            "Crime": 0.011511517975227523,
+            "Documentary": 0.0,
+            "Drama": 0.03468471475286056,
+            "Fantasy": -0.00318649554816031,
+            "Film-Noir": 0.0021413318221514266,
+            "Horror": -0.0018900337856909265,
+            "Musical": 0.0018446151368689892,
+            "Mystery": 0.0036686700655054576,
+            "Romance": 0.017073688142840757,
+            "Sci-Fi": -0.027470656641155236,
+            "Thriller": -0.0017356737637679587,
+            "War": -0.007817395243461187,
+            "Western": -0.0013792572060261612
+          },
+          "jensen_shannon_between_genders": 0.009481035657736111,
+          "l1_between_genders": 0.20322323850217894,
+          "normalization": "multi-label genre tag share over hard Top-K items",
+          "preference_amplification": {
+            "amplification_by_genre": {
+              "Action": -0.0044600309428522306,
+              "Adventure": 0.0004041237138408954,
+              "Animation": 0.0020379010947219937,
+              "Children's": -0.004042577477522524,
+              "Comedy": 0.010455428343584316,
+              "Crime": 0.011106493206292395,
+              "Documentary": 0.0009067631223482527,
+              "Drama": 0.0037609857232231148,
+              "Fantasy": 0.003401164912131875,
+              "Film-Noir": 0.0014637505878692166,
+              "Horror": 0.00654954528162085,
+              "Musical": 0.0024999229395744494,
+              "Mystery": 0.0035262373320014972,
+              "Romance": -0.013011563416519253,
+              "Sci-Fi": -0.0012401741019136894,
+              "Thriller": -0.009008242245045234,
+              "War": -0.017209456582147176,
+              "Western": 0.0028597285087912684
+            },
+            "female_minus_male_history_by_genre": {
+              "Action": -0.03207989597135168,
+              "Adventure": -0.021592626556319397,
+              "Animation": -0.0024415784008672576,
+              "Children's": 0.005419477588385225,
+              "Comedy": 0.018854752901187738,
+              "Crime": 0.00040502476893512773,
+              "Documentary": -0.0009067631223482527,
+              "Drama": 0.030923729029637442,
+              "Fantasy": -0.006587660460292185,
+              "Film-Noir": 0.00067758123428221,
+              "Horror": -0.008439579067311777,
+              "Musical": -0.0006553078027054602,
+              "Mystery": 0.00014243273350396032,
+              "Romance": 0.03008525155936001,
+              "Sci-Fi": -0.026230482539241547,
+              "Thriller": 0.007272568481277275,
+              "War": 0.00939206133868599,
+              "Western": -0.00423898571481743
+            },
+            "history_l1_between_genders": 0.20634575927050994,
+            "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+            "recommendation_l1_between_genders": 0.20322323850217894,
+            "residual_l1": 0.09794408953200023,
+            "scalar_l1_amplification": -0.0031225207683309997
+          }
+        },
+        "hitrate@10": 0.7864238410596026,
+        "ineligible_catalog_items": 377,
+        "metrics_by_gender": {
+          "female": {
+            "hitrate@10": 0.7309941520467836,
+            "ndcg@10": 0.2815384672330792,
+            "recall@10": 0.04674112921410807,
+            "users": 171
+          },
+          "male": {
+            "hitrate@10": 0.8083140877598153,
+            "ndcg@10": 0.3754400693955971,
+            "recall@10": 0.052105410160706564,
+            "users": 433
+          }
+        },
+        "ndcg@10": 0.34885534428004983,
+        "recall@10": 0.0505867147271497,
+        "unique_recommended_items": 292,
+        "users_evaluated": 604,
+        "users_total": 604,
+        "users_with_known_binary_gender": 604,
+        "users_with_only_cold_future_positives": 0,
+        "users_without_future_positive": 0
+      },
+      "5": {
+        "absolute_gender_gaps": {
+          "hitrate@10": 0.10928362573099415,
+          "ndcg@10": 0.10207678701500328,
+          "recall@10": 0.014261595462793451
+        },
+        "catalog_items": 3883,
+        "cohort_by_gender": {
+          "female": {
+            "ranking_eligibility_rate": 1.0,
+            "ranking_evaluated": 171,
+            "total": 171,
+            "without_future_positive": 0
+          },
+          "male": {
+            "ranking_eligibility_rate": 0.9976905311778291,
+            "ranking_evaluated": 432,
+            "total": 433,
+            "without_future_positive": 1
+          }
+        },
+        "coverage": 0.06046776953793497,
+        "eligible_catalog_items": 3506,
+        "excluded_cold_query_positives": 16,
+        "genre_exposure": {
+          "distribution_by_gender": {
+            "female": {
+              "Action": 0.135987114588127,
+              "Adventure": 0.08283479061205706,
+              "Animation": 0.00529222273354809,
+              "Children's": 0.017027151403589506,
+              "Comedy": 0.08904739990796134,
+              "Crime": 0.07984353428439944,
+              "Documentary": 0.0,
+              "Drama": 0.208697653014266,
+              "Fantasy": 0.026000920386562355,
+              "Film-Noir": 0.015876668200644272,
+              "Horror": 0.007593189139438564,
+              "Musical": 0.007132995858260469,
+              "Mystery": 0.015646571560055222,
+              "Romance": 0.044408651633686146,
+              "Sci-Fi": 0.08513575701794754,
+              "Thriller": 0.11412793373216751,
+              "War": 0.06465715600552233,
+              "Western": 0.0006902899217671422
+            },
+            "male": {
+              "Action": 0.17800957592339262,
+              "Adventure": 0.09704172366621067,
+              "Animation": 0.004018467852257182,
+              "Children's": 0.01222640218878249,
+              "Comedy": 0.06121751025991792,
+              "Crime": 0.0679719562243502,
+              "Documentary": 0.0,
+              "Drama": 0.17262311901504787,
+              "Fantasy": 0.026419288645690833,
+              "Film-Noir": 0.012739398084815322,
+              "Horror": 0.012482900136798905,
+              "Musical": 0.005899452804377565,
+              "Mystery": 0.012910396716826266,
+              "Romance": 0.028300273597811218,
+              "Sci-Fi": 0.11764705882352941,
+              "Thriller": 0.1234610123119015,
+              "War": 0.06600547195622435,
+              "Western": 0.0010259917920656635
+            }
+          },
+          "female_minus_male_by_genre": {
+            "Action": -0.042022461335265604,
+            "Adventure": -0.014206933054153603,
+            "Animation": 0.0012737548812909085,
+            "Children's": 0.004800749214807016,
+            "Comedy": 0.02782988964804342,
+            "Crime": 0.011871578060049237,
+            "Documentary": 0.0,
+            "Drama": 0.03607453399921812,
+            "Fantasy": -0.0004183682591284779,
+            "Film-Noir": 0.00313727011582895,
+            "Horror": -0.004889710997360341,
+            "Musical": 0.0012335430538829044,
+            "Mystery": 0.0027361748432289563,
+            "Romance": 0.016108378035874928,
+            "Sci-Fi": -0.03251130180558187,
+            "Thriller": -0.009333078579733992,
+            "War": -0.0013483159507020198,
+            "Western": -0.0003357018702985213
+          },
+          "jensen_shannon_between_genders": 0.010278298390853199,
+          "l1_between_genders": 0.21013174370444887,
+          "normalization": "multi-label genre tag share over hard Top-K items",
+          "preference_amplification": {
+            "amplification_by_genre": {
+              "Action": -0.004247678901200938,
+              "Adventure": 0.006843761241182793,
+              "Animation": 0.004940472284887365,
+              "Children's": 0.00015884101238171355,
+              "Comedy": 0.006448961602076919,
+              "Crime": 0.018271144693360712,
+              "Documentary": -0.0013402651940224567,
+              "Drama": -0.0010632781124779722,
+              "Fantasy": 0.004561181671508546,
+              "Film-Noir": 0.005310817038132577,
+              "Horror": 0.0023844599891797115,
+              "Musical": -0.0015314845784522224,
+              "Mystery": 0.0037497945257623927,
+              "Romance": -0.016012265509027547,
+              "Sci-Fi": -0.006832589265785692,
+              "Thriller": -0.018950485475056372,
+              "War": -0.004830644162306275,
+              "Western": 0.002139257139856775
+            },
+            "female_minus_male_history_by_genre": {
+              "Action": -0.037774782434064666,
+              "Adventure": -0.021050694295336396,
+              "Animation": -0.0036667174035964565,
+              "Children's": 0.004641908202425302,
+              "Comedy": 0.021380928045966502,
+              "Crime": -0.006399566633311475,
+              "Documentary": 0.0013402651940224567,
+              "Drama": 0.03713781211169609,
+              "Fantasy": -0.004979549930637024,
+              "Film-Noir": -0.002173546922303627,
+              "Horror": -0.007274170986540053,
+              "Musical": 0.0027650276323351267,
+              "Mystery": -0.0010136196825334363,
+              "Romance": 0.032120643544902475,
+              "Sci-Fi": -0.02567871253979618,
+              "Thriller": 0.00961740689532238,
+              "War": 0.0034823282116042548,
+              "Western": -0.002474959010155296
+            },
+            "history_l1_between_genders": 0.2249726396765492,
+            "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+            "recommendation_l1_between_genders": 0.21013174370444887,
+            "residual_l1": 0.10961738239665898,
+            "scalar_l1_amplification": -0.014840895972100338
+          }
+        },
+        "hitrate@10": 0.8092868988391376,
+        "ineligible_catalog_items": 377,
+        "metrics_by_gender": {
+          "female": {
+            "hitrate@10": 0.7309941520467836,
+            "ndcg@10": 0.2906818275939747,
+            "recall@10": 0.04645614342573128,
+            "users": 171
+          },
+          "male": {
+            "hitrate@10": 0.8402777777777778,
+            "ndcg@10": 0.392758614608978,
+            "recall@10": 0.06071773888852473,
+            "users": 432
+          }
+        },
+        "ndcg@10": 0.36381146605248454,
+        "recall@10": 0.05667340584683705,
+        "unique_recommended_items": 212,
+        "users_evaluated": 603,
+        "users_total": 604,
+        "users_with_known_binary_gender": 604,
+        "users_with_only_cold_future_positives": 0,
+        "users_without_future_positive": 1
+      }
+    },
+    "MultVAE": {
+      "checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/fair_unseen_rec/artifacts/runs/seed44/baseline/best.pt",
+      "checkpoint_epoch": 18,
+      "model_type": "multvae",
+      "support_results": {
+        "1": {
+          "absolute_gender_gaps": {
+            "hitrate@10": 0.0134786542954769,
+            "ndcg@10": 0.06694720082399641,
+            "recall@10": 0.002306273258909336
+          },
+          "catalog_items": 3883,
+          "cohort_by_gender": {
+            "female": {
+              "ranking_eligibility_rate": 1.0,
+              "ranking_evaluated": 171,
+              "total": 171,
+              "without_future_positive": 0
+            },
+            "male": {
+              "ranking_eligibility_rate": 1.0,
+              "ranking_evaluated": 433,
+              "total": 433,
+              "without_future_positive": 0
+            }
+          },
+          "coverage": 0.05847119224187108,
+          "eligible_catalog_items": 3506,
+          "excluded_cold_query_positives": 18,
+          "genre_exposure": {
+            "distribution_by_gender": {
+              "female": {
+                "Action": 0.15201845444059978,
+                "Adventure": 0.07912341407151095,
+                "Animation": 0.006689734717416378,
+                "Children's": 0.016147635524798153,
+                "Comedy": 0.10288350634371396,
+                "Crime": 0.03852364475201846,
+                "Documentary": 0.0,
+                "Drama": 0.21176470588235294,
+                "Fantasy": 0.029296424452133794,
+                "Film-Noir": 0.005536332179930796,
+                "Horror": 0.008073817762399077,
+                "Musical": 0.008765859284890426,
+                "Mystery": 0.005536332179930796,
+                "Romance": 0.04798154555940023,
+                "Sci-Fi": 0.09619377162629758,
+                "Thriller": 0.10311418685121107,
+                "War": 0.08696655132641291,
+                "Western": 0.001384083044982699
+              },
+              "male": {
+                "Action": 0.16928858591155393,
+                "Adventure": 0.0895822408669813,
+                "Animation": 0.013022198916273379,
+                "Children's": 0.020800559342772244,
+                "Comedy": 0.09430169550777837,
+                "Crime": 0.037930431742702324,
+                "Documentary": 0.0,
+                "Drama": 0.18807900716657927,
+                "Fantasy": 0.03163782555497291,
+                "Film-Noir": 0.006205208879566509,
+                "Horror": 0.007865757734661772,
+                "Musical": 0.005331235797937424,
+                "Mystery": 0.005331235797937424,
+                "Romance": 0.035046320573326344,
+                "Sci-Fi": 0.1100332109771019,
+                "Thriller": 0.10059430169550777,
+                "War": 0.08425100506904387,
+                "Western": 0.0006991784653032686
+              }
+            },
+            "female_minus_male_by_genre": {
+              "Action": -0.01727013147095416,
+              "Adventure": -0.010458826795470347,
+              "Animation": -0.006332464198857001,
+              "Children's": -0.004652923817974091,
+              "Comedy": 0.008581810835935594,
+              "Crime": 0.0005932130093161334,
+              "Documentary": 0.0,
+              "Drama": 0.023685698715773668,
+              "Fantasy": -0.0023414011028391156,
+              "Film-Noir": -0.0006688766996357136,
+              "Horror": 0.000208060027737305,
+              "Musical": 0.0034346234869530026,
+              "Mystery": 0.00020509638199337193,
+              "Romance": 0.012935224986073884,
+              "Sci-Fi": -0.013839439350804325,
+              "Thriller": 0.002519885155703297,
+              "War": 0.002715546257369042,
+              "Western": 0.0006849045796794303
+            },
+            "jensen_shannon_between_genders": 0.0036985336499671235,
+            "l1_between_genders": 0.11112812687306949,
+            "normalization": "multi-label genre tag share over hard Top-K items",
+            "preference_amplification": {
+              "amplification_by_genre": {
+                "Action": 0.004546036856842087,
+                "Adventure": 0.02765855969400917,
+                "Animation": 0.0018329104781455849,
+                "Children's": -0.007502683877036474,
+                "Comedy": 0.006861618883185511,
+                "Crime": -0.010680319659565375,
+                "Documentary": 0.004761904761904762,
+                "Drama": -0.04845900412660359,
+                "Fantasy": 0.005285029314288977,
+                "Film-Noir": -0.006375779615840954,
+                "Horror": 0.0025262586250056705,
+                "Musical": 0.007790474354431778,
+                "Mystery": -0.010802655555991122,
+                "Romance": 0.01229292155307278,
+                "Sci-Fi": 0.008633798006153971,
+                "Thriller": -0.0068341200122553625,
+                "War": 0.0011134790739065065,
+                "Western": 0.0073515712463460975
+              },
+              "female_minus_male_history_by_genre": {
+                "Action": -0.021816168327796245,
+                "Adventure": -0.038117386489479516,
+                "Animation": -0.008165374677002585,
+                "Children's": 0.0028497600590623832,
+                "Comedy": 0.001720191952750083,
+                "Crime": 0.011273532668881509,
+                "Documentary": -0.004761904761904762,
+                "Drama": 0.07214470284237726,
+                "Fantasy": -0.0076264304171280925,
+                "Film-Noir": 0.00570690291620524,
+                "Horror": -0.0023181985972683655,
+                "Musical": -0.004355850867478775,
+                "Mystery": 0.011007751937984495,
+                "Romance": 0.000642303433001104,
+                "Sci-Fi": -0.022473237356958296,
+                "Thriller": 0.00935400516795866,
+                "War": 0.0016020671834625355,
+                "Western": -0.006666666666666667
+              },
+              "history_l1_between_genders": 0.23260243632336655,
+              "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+              "recommendation_l1_between_genders": 0.11112812687306949,
+              "residual_l1": 0.1813091256945858,
+              "scalar_l1_amplification": -0.12147430945029707
+            }
+          },
+          "hitrate@10": 0.8576158940397351,
+          "ineligible_catalog_items": 377,
+          "metrics_by_gender": {
+            "female": {
+              "hitrate@10": 0.847953216374269,
+              "ndcg@10": 0.3059894984586613,
+              "recall@10": 0.04995205470824798,
+              "users": 171
+            },
+            "male": {
+              "hitrate@10": 0.8614318706697459,
+              "ndcg@10": 0.3729366992826577,
+              "recall@10": 0.05225832796715731,
+              "users": 433
+            }
+          },
+          "ndcg@10": 0.35398310434738717,
+          "posthoc_gender_probe": {
+            "protocol": {
+              "classifier": "class-balanced linear logistic regression (limited linear attack)",
+              "fit": "train users only",
+              "model_selection_and_threshold": "validation users only",
+              "positive_class": "female after validation-only orientation",
+              "report": "test users only",
+              "selection": "strongest validation abs(AUC - 0.5); direction invariant"
+            },
+            "selected_l2": 0.1,
+            "selected_threshold": 0.47094204151114816,
+            "test": {
+              "auc": 0.5760774144753724,
+              "auc_distance_from_random": 0.07607741447537242,
+              "balanced_accuracy": 0.540051051416069,
+              "users": 604
+            },
+            "train_users": 4832,
+            "validation": {
+              "auc": 0.6136771875801899,
+              "auc_distance_from_random": 0.11367718758018985,
+              "balanced_accuracy": 0.5996853179908972,
+              "users": 604
+            }
+          },
+          "recall@10": 0.05160539298822768,
+          "unique_recommended_items": 205,
+          "users_evaluated": 604,
+          "users_total": 604,
+          "users_with_known_binary_gender": 604,
+          "users_with_only_cold_future_positives": 0,
+          "users_without_future_positive": 0
+        },
+        "10": {
+          "absolute_gender_gaps": {
+            "hitrate@10": 0.05375683822708499,
+            "ndcg@10": 0.06750601413259089,
+            "recall@10": 0.009977875291050417
+          },
+          "catalog_items": 3883,
+          "cohort_by_gender": {
+            "female": {
+              "ranking_eligibility_rate": 0.9883040935672515,
+              "ranking_evaluated": 169,
+              "total": 171,
+              "without_future_positive": 2
+            },
+            "male": {
+              "ranking_eligibility_rate": 0.9792147806004619,
+              "ranking_evaluated": 424,
+              "total": 433,
+              "without_future_positive": 9
+            }
+          },
+          "coverage": 0.08471192241871078,
+          "eligible_catalog_items": 3506,
+          "excluded_cold_query_positives": 15,
+          "genre_exposure": {
+            "distribution_by_gender": {
+              "female": {
+                "Action": 0.11423460260669563,
+                "Adventure": 0.05366726296958855,
+                "Animation": 0.029644773830820342,
+                "Children's": 0.03935599284436494,
+                "Comedy": 0.14030155890621007,
+                "Crime": 0.04318936877076412,
+                "Documentary": 0.0002555583950932788,
+                "Drama": 0.22514694607717864,
+                "Fantasy": 0.020189113212369027,
+                "Film-Noir": 0.01073345259391771,
+                "Horror": 0.01047789419882443,
+                "Musical": 0.014822386915410171,
+                "Mystery": 0.01047789419882443,
+                "Romance": 0.05443393815486839,
+                "Sci-Fi": 0.06440071556350627,
+                "Thriller": 0.09378993099923333,
+                "War": 0.07308970099667775,
+                "Western": 0.0017889087656529517
+              },
+              "male": {
+                "Action": 0.1618938526155021,
+                "Adventure": 0.06815578465063,
+                "Animation": 0.020332187857961054,
+                "Children's": 0.022336769759450172,
+                "Comedy": 0.11025200458190149,
+                "Crime": 0.04104620084001527,
+                "Documentary": 9.545628102329134e-05,
+                "Drama": 0.18738067964872088,
+                "Fantasy": 0.018518518518518517,
+                "Film-Noir": 0.014509354715540282,
+                "Horror": 0.017659411989308895,
+                "Musical": 0.006204658266513937,
+                "Mystery": 0.012409316533027874,
+                "Romance": 0.03579610538373425,
+                "Sci-Fi": 0.09984726995036274,
+                "Thriller": 0.10757922871324933,
+                "War": 0.07502863688430698,
+                "Western": 0.0009545628102329134
+              }
+            },
+            "female_minus_male_by_genre": {
+              "Action": -0.04765925000880647,
+              "Adventure": -0.014488521681041457,
+              "Animation": 0.009312585972859288,
+              "Children's": 0.017019223084914766,
+              "Comedy": 0.030049554324308586,
+              "Crime": 0.0021431679307488474,
+              "Documentary": 0.00016010211406998747,
+              "Drama": 0.03776626642845776,
+              "Fantasy": 0.0016705946938505092,
+              "Film-Noir": -0.0037759021216225725,
+              "Horror": -0.0071815177904844645,
+              "Musical": 0.008617728648896233,
+              "Mystery": -0.001931422334203443,
+              "Romance": 0.018637832771134143,
+              "Sci-Fi": -0.03544655438685647,
+              "Thriller": -0.013789297714016005,
+              "War": -0.0019389358876292367,
+              "Western": 0.0008343459554200383
+            },
+            "jensen_shannon_between_genders": 0.015440998746961247,
+            "l1_between_genders": 0.25242280384932025,
+            "normalization": "multi-label genre tag share over hard Top-K items",
+            "preference_amplification": {
+              "amplification_by_genre": {
+                "Action": -0.007500589852254297,
+                "Adventure": 0.0005718965824123151,
+                "Animation": 0.008905595951603722,
+                "Children's": 0.008845830419672532,
+                "Comedy": 0.0001855905694111426,
+                "Crime": 0.009128227396718522,
+                "Documentary": -0.0006426599693515637,
+                "Drama": -0.0005836519177438437,
+                "Fantasy": 0.0029163428870348593,
+                "Film-Noir": -0.0017037848212182634,
+                "Horror": 0.0002542632460487901,
+                "Musical": 0.00299219953259096,
+                "Mystery": 0.0001899738579158195,
+                "Romance": -0.011186282574140158,
+                "Sci-Fi": -0.006608879795811172,
+                "Thriller": -0.012292378184073152,
+                "War": 0.0016663435797765816,
+                "Western": 0.004861963091407282
+              },
+              "female_minus_male_history_by_genre": {
+                "Action": -0.04015866015655217,
+                "Adventure": -0.015060418263453772,
+                "Animation": 0.0004069900212555662,
+                "Children's": 0.008173392665242234,
+                "Comedy": 0.029863963754897443,
+                "Crime": -0.006985059465969674,
+                "Documentary": 0.0008027620834215512,
+                "Drama": 0.038349918346201606,
+                "Fantasy": -0.00124574819318435,
+                "Film-Noir": -0.002072117300404309,
+                "Horror": -0.0074357810365332545,
+                "Musical": 0.005625529116305273,
+                "Mystery": -0.0021213961921192626,
+                "Romance": 0.0298241153452743,
+                "Sci-Fi": -0.028837674591045297,
+                "Thriller": -0.0014969195299428528,
+                "War": -0.0036052794674058183,
+                "Western": -0.004027617135987244
+              },
+              "history_l1_between_genders": 0.22609334266519598,
+              "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+              "recommendation_l1_between_genders": 0.25242280384932025,
+              "residual_l1": 0.08103645422918497,
+              "scalar_l1_amplification": 0.02632946118412427
+            }
+          },
+          "hitrate@10": 0.8431703204047217,
+          "ineligible_catalog_items": 377,
+          "metrics_by_gender": {
+            "female": {
+              "hitrate@10": 0.8047337278106509,
+              "ndcg@10": 0.3123967169303629,
+              "recall@10": 0.06408332342273047,
+              "users": 169
+            },
+            "male": {
+              "hitrate@10": 0.8584905660377359,
+              "ndcg@10": 0.3799027310629538,
+              "recall@10": 0.07406119871378089,
+              "users": 424
+            }
+          },
+          "ndcg@10": 0.360664086225841,
+          "posthoc_gender_probe": {
+            "protocol": {
+              "classifier": "class-balanced linear logistic regression (limited linear attack)",
+              "fit": "train users only",
+              "model_selection_and_threshold": "validation users only",
+              "positive_class": "female after validation-only orientation",
+              "report": "test users only",
+              "selection": "strongest validation abs(AUC - 0.5); direction invariant"
+            },
+            "selected_l2": 0.01,
+            "selected_threshold": 0.41900892512438165,
+            "test": {
+              "auc": 0.7437435003984172,
+              "auc_distance_from_random": 0.2437435003984172,
+              "balanced_accuracy": 0.673568061801926,
+              "users": 604
+            },
+            "train_users": 4832,
+            "validation": {
+              "auc": 0.7520900017557365,
+              "auc_distance_from_random": 0.2520900017557365,
+              "balanced_accuracy": 0.6940358980592358,
+              "users": 604
+            }
+          },
+          "recall@10": 0.07121758838631458,
+          "unique_recommended_items": 297,
+          "users_evaluated": 593,
+          "users_total": 604,
+          "users_with_known_binary_gender": 604,
+          "users_with_only_cold_future_positives": 0,
+          "users_without_future_positive": 11
+        },
+        "20": {
+          "absolute_gender_gaps": {
+            "hitrate@10": 0.021389108129439616,
+            "ndcg@10": 0.05431756452141995,
+            "recall@10": 0.001998605749543046
+          },
+          "catalog_items": 3883,
+          "cohort_by_gender": {
+            "female": {
+              "ranking_eligibility_rate": 0.8187134502923976,
+              "ranking_evaluated": 140,
+              "total": 171,
+              "without_future_positive": 31
+            },
+            "male": {
+              "ranking_eligibility_rate": 0.836027713625866,
+              "ranking_evaluated": 362,
+              "total": 433,
+              "without_future_positive": 71
+            }
+          },
+          "coverage": 0.11380490587564175,
+          "eligible_catalog_items": 3506,
+          "excluded_cold_query_positives": 14,
+          "genre_exposure": {
+            "distribution_by_gender": {
+              "female": {
+                "Action": 0.08828207847295864,
+                "Adventure": 0.04215270413573701,
+                "Animation": 0.041357370095440084,
+                "Children's": 0.05063626723223754,
+                "Comedy": 0.1633085896076352,
+                "Crime": 0.041357370095440084,
+                "Documentary": 0.0002651113467656416,
+                "Drama": 0.2150053022269353,
+                "Fantasy": 0.01352067868504772,
+                "Film-Noir": 0.014050901378579003,
+                "Horror": 0.01352067868504772,
+                "Musical": 0.025715800636267234,
+                "Mystery": 0.015111346765641569,
+                "Romance": 0.073966065747614,
+                "Sci-Fi": 0.04984093319194061,
+                "Thriller": 0.09384941675503712,
+                "War": 0.05646871686108165,
+                "Western": 0.0015906680805938495
+              },
+              "male": {
+                "Action": 0.161610268378063,
+                "Adventure": 0.06796966161026838,
+                "Animation": 0.01866977829638273,
+                "Children's": 0.020420070011668612,
+                "Comedy": 0.11483858420847919,
+                "Crime": 0.03996499416569428,
+                "Documentary": 0.00029171528588098014,
+                "Drama": 0.176293271100739,
+                "Fantasy": 0.018572539867755738,
+                "Film-Noir": 0.016433294437961883,
+                "Horror": 0.022170361726954493,
+                "Musical": 0.006126021003500583,
+                "Mystery": 0.013321664721898094,
+                "Romance": 0.037922987164527425,
+                "Sci-Fi": 0.10482302605989888,
+                "Thriller": 0.10890704006223259,
+                "War": 0.06962271489692727,
+                "Western": 0.002042007001166861
+              }
+            },
+            "female_minus_male_by_genre": {
+              "Action": -0.07332818990510435,
+              "Adventure": -0.025816957474531367,
+              "Animation": 0.022687591799057355,
+              "Children's": 0.030216197220568928,
+              "Comedy": 0.04847000539915601,
+              "Crime": 0.0013923759297458024,
+              "Documentary": -2.6603939115338543e-05,
+              "Drama": 0.03871203112619631,
+              "Fantasy": -0.005051861182708018,
+              "Film-Noir": -0.0023823930593828806,
+              "Horror": -0.008649683041906773,
+              "Musical": 0.01958977963276665,
+              "Mystery": 0.001789682043743475,
+              "Romance": 0.03604307858308657,
+              "Sci-Fi": -0.054982092867958264,
+              "Thriller": -0.01505762330719547,
+              "War": -0.013153998035845618,
+              "Western": -0.0004513389205730116
+            },
+            "jensen_shannon_between_genders": 0.04071291602255641,
+            "l1_between_genders": 0.3978014834686422,
+            "normalization": "multi-label genre tag share over hard Top-K items",
+            "preference_amplification": {
+              "amplification_by_genre": {
+                "Action": -0.021455322379560007,
+                "Adventure": -0.011708834192207723,
+                "Animation": 0.02003065796187916,
+                "Children's": 0.018534740725830317,
+                "Comedy": 0.015604763563104015,
+                "Crime": 0.007458300899622704,
+                "Documentary": -0.0023039640217905255,
+                "Drama": -0.007215527503067559,
+                "Fantasy": -0.005752060986572927,
+                "Film-Noir": -0.0024232442312673817,
+                "Horror": 0.002449757614449129,
+                "Musical": 0.012297536285097619,
+                "Mystery": 0.00037155690229990004,
+                "Romance": -0.004679438904389099,
+                "Sci-Fi": -0.01384001611969505,
+                "Thriller": -0.008655531529328547,
+                "War": -0.003677062046870072,
+                "Western": 0.004963687962466085
+              },
+              "female_minus_male_history_by_genre": {
+                "Action": -0.05187286752554435,
+                "Adventure": -0.014108123282323644,
+                "Animation": 0.002656933837178195,
+                "Children's": 0.011681456494738611,
+                "Comedy": 0.032865241836051995,
+                "Crime": -0.006065924969876901,
+                "Documentary": 0.002277360082675187,
+                "Drama": 0.04592755862926387,
+                "Fantasy": 0.000700199803864909,
+                "Film-Noir": 4.085117188450116e-05,
+                "Horror": -0.011099440656355902,
+                "Musical": 0.007292243347669031,
+                "Mystery": 0.0014181251414435748,
+                "Romance": 0.04072251748747567,
+                "Sci-Fi": -0.041142076748263215,
+                "Thriller": -0.006402091777866922,
+                "War": -0.009476935988975546,
+                "Western": -0.005415026883039097
+              },
+              "history_l1_between_genders": 0.2911649756644911,
+              "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+              "recommendation_l1_between_genders": 0.3978014834686422,
+              "residual_l1": 0.16342200382949781,
+              "scalar_l1_amplification": 0.10663650780415107
+            }
+          },
+          "hitrate@10": 0.7868525896414342,
+          "ineligible_catalog_items": 377,
+          "metrics_by_gender": {
+            "female": {
+              "hitrate@10": 0.7714285714285715,
+              "ndcg@10": 0.2714877637871251,
+              "recall@10": 0.05668684950980353,
+              "users": 140
+            },
+            "male": {
+              "hitrate@10": 0.7928176795580111,
+              "ndcg@10": 0.32580532830854503,
+              "recall@10": 0.054688243760260484,
+              "users": 362
+            }
+          },
+          "ndcg@10": 0.3106570035416152,
+          "posthoc_gender_probe": {
+            "protocol": {
+              "classifier": "class-balanced linear logistic regression (limited linear attack)",
+              "fit": "train users only",
+              "model_selection_and_threshold": "validation users only",
+              "positive_class": "female after validation-only orientation",
+              "report": "test users only",
+              "selection": "strongest validation abs(AUC - 0.5); direction invariant"
+            },
+            "selected_l2": 0.0001,
+            "selected_threshold": 0.3975669395494478,
+            "test": {
+              "auc": 0.7849627918911983,
+              "auc_distance_from_random": 0.28496279189119833,
+              "balanced_accuracy": 0.7114311953864646,
+              "users": 604
+            },
+            "train_users": 4832,
+            "validation": {
+              "auc": 0.7751981956430722,
+              "auc_distance_from_random": 0.27519819564307224,
+              "balanced_accuracy": 0.7107424064395014,
+              "users": 604
+            }
+          },
+          "recall@10": 0.055245623849774474,
+          "unique_recommended_items": 399,
+          "users_evaluated": 502,
+          "users_total": 604,
+          "users_with_known_binary_gender": 604,
+          "users_with_only_cold_future_positives": 0,
+          "users_without_future_positive": 102
+        },
+        "3": {
+          "absolute_gender_gaps": {
+            "hitrate@10": 0.04517645152141325,
+            "ndcg@10": 0.051137854587544385,
+            "recall@10": 0.0004617665386096939
+          },
+          "catalog_items": 3883,
+          "cohort_by_gender": {
+            "female": {
+              "ranking_eligibility_rate": 1.0,
+              "ranking_evaluated": 171,
+              "total": 171,
+              "without_future_positive": 0
+            },
+            "male": {
+              "ranking_eligibility_rate": 1.0,
+              "ranking_evaluated": 433,
+              "total": 433,
+              "without_future_positive": 0
+            }
+          },
+          "coverage": 0.057615516257843696,
+          "eligible_catalog_items": 3506,
+          "excluded_cold_query_positives": 17,
+          "genre_exposure": {
+            "distribution_by_gender": {
+              "female": {
+                "Action": 0.1433666191155492,
+                "Adventure": 0.07132667617689016,
+                "Animation": 0.010936757013789824,
+                "Children's": 0.01925820256776034,
+                "Comedy": 0.11293390394674274,
+                "Crime": 0.039942938659058486,
+                "Documentary": 0.0,
+                "Drama": 0.2249167855444603,
+                "Fantasy": 0.024964336661911554,
+                "Film-Noir": 0.007845934379457917,
+                "Horror": 0.007845934379457917,
+                "Musical": 0.004755111745126011,
+                "Mystery": 0.007132667617689016,
+                "Romance": 0.053019495958155013,
+                "Sci-Fi": 0.08392772230147408,
+                "Thriller": 0.0951022349025202,
+                "War": 0.0924869234427009,
+                "Western": 0.00023775558725630053
+              },
+              "male": {
+                "Action": 0.1758614688478942,
+                "Adventure": 0.09049773755656108,
+                "Animation": 0.011747302471284372,
+                "Children's": 0.018621649843369302,
+                "Comedy": 0.0870170553428472,
+                "Crime": 0.03602506091193874,
+                "Documentary": 0.0,
+                "Drama": 0.19404803341454926,
+                "Fantasy": 0.028454577097111033,
+                "Film-Noir": 0.005482074486599374,
+                "Horror": 0.007831534980856248,
+                "Musical": 0.003393665158371041,
+                "Mystery": 0.005395057431256526,
+                "Romance": 0.03358858336233902,
+                "Sci-Fi": 0.11146884789418726,
+                "Thriller": 0.09632788026453185,
+                "War": 0.09397841977027498,
+                "Western": 0.0002610511660285416
+              }
+            },
+            "female_minus_male_by_genre": {
+              "Action": -0.03249484973234498,
+              "Adventure": -0.019171061379670923,
+              "Animation": -0.0008105454574945485,
+              "Children's": 0.0006365527243910388,
+              "Comedy": 0.025916848603895537,
+              "Crime": 0.003917877747119748,
+              "Documentary": 0.0,
+              "Drama": 0.030868752129911026,
+              "Fantasy": -0.0034902404351994792,
+              "Film-Noir": 0.0023638598928585434,
+              "Horror": 1.4399398601669042e-05,
+              "Musical": 0.0013614465867549698,
+              "Mystery": 0.0017376101864324898,
+              "Romance": 0.019430912595815995,
+              "Sci-Fi": -0.027541125592713184,
+              "Thriller": -0.0012256453620116403,
+              "War": -0.001491496327574074,
+              "Western": -2.329557877224107e-05
+            },
+            "jensen_shannon_between_genders": 0.007541474382936759,
+            "l1_between_genders": 0.17249651973156205,
+            "normalization": "multi-label genre tag share over hard Top-K items",
+            "preference_amplification": {
+              "amplification_by_genre": {
+                "Action": -0.0004149537609933057,
+                "Adventure": 0.002421565176648474,
+                "Animation": 0.001631032943372709,
+                "Children's": -0.004782924863994186,
+                "Comedy": 0.007062095702707799,
+                "Crime": 0.0035128529781846204,
+                "Documentary": 0.0009067631223482527,
+                "Drama": -5.497689972641662e-05,
+                "Fantasy": 0.0030974200250927057,
+                "Film-Noir": 0.0016862786585763335,
+                "Horror": 0.008453978465913446,
+                "Musical": 0.00201675438946043,
+                "Mystery": 0.0015951774529285295,
+                "Romance": -0.010654338963544015,
+                "Sci-Fi": -0.001310643053471637,
+                "Thriller": -0.008498213843288915,
+                "War": -0.010883557666260063,
+                "Western": 0.004215690136045188
+              },
+              "female_minus_male_history_by_genre": {
+                "Action": -0.03207989597135168,
+                "Adventure": -0.021592626556319397,
+                "Animation": -0.0024415784008672576,
+                "Children's": 0.005419477588385225,
+                "Comedy": 0.018854752901187738,
+                "Crime": 0.00040502476893512773,
+                "Documentary": -0.0009067631223482527,
+                "Drama": 0.030923729029637442,
+                "Fantasy": -0.006587660460292185,
+                "Film-Noir": 0.00067758123428221,
+                "Horror": -0.008439579067311777,
+                "Musical": -0.0006553078027054602,
+                "Mystery": 0.00014243273350396032,
+                "Romance": 0.03008525155936001,
+                "Sci-Fi": -0.026230482539241547,
+                "Thriller": 0.007272568481277275,
+                "War": 0.00939206133868599,
+                "Western": -0.00423898571481743
+              },
+              "history_l1_between_genders": 0.20634575927050994,
+              "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+              "recommendation_l1_between_genders": 0.17249651973156205,
+              "residual_l1": 0.07319921810255703,
+              "scalar_l1_amplification": -0.03384923953894789
+            }
+          },
+          "hitrate@10": 0.8394039735099338,
+          "ineligible_catalog_items": 377,
+          "metrics_by_gender": {
+            "female": {
+              "hitrate@10": 0.8070175438596491,
+              "ndcg@10": 0.3349561084647899,
+              "recall@10": 0.05624704143148595,
+              "users": 171
+            },
+            "male": {
+              "hitrate@10": 0.8521939953810623,
+              "ndcg@10": 0.3860939630523343,
+              "recall@10": 0.055785274892876255,
+              "users": 433
+            }
+          },
+          "ndcg@10": 0.371616192962152,
+          "posthoc_gender_probe": {
+            "protocol": {
+              "classifier": "class-balanced linear logistic regression (limited linear attack)",
+              "fit": "train users only",
+              "model_selection_and_threshold": "validation users only",
+              "positive_class": "female after validation-only orientation",
+              "report": "test users only",
+              "selection": "strongest validation abs(AUC - 0.5); direction invariant"
+            },
+            "selected_l2": 0.1,
+            "selected_threshold": 0.5540576812900919,
+            "test": {
+              "auc": 0.6451183771592183,
+              "auc_distance_from_random": 0.14511837715921827,
+              "balanced_accuracy": 0.5840457571951434,
+              "users": 604
+            },
+            "train_users": 4832,
+            "validation": {
+              "auc": 0.6742028280863822,
+              "auc_distance_from_random": 0.1742028280863822,
+              "balanced_accuracy": 0.6301405939791742,
+              "users": 604
+            }
+          },
+          "recall@10": 0.05591600681026409,
+          "unique_recommended_items": 202,
+          "users_evaluated": 604,
+          "users_total": 604,
+          "users_with_known_binary_gender": 604,
+          "users_with_only_cold_future_positives": 0,
+          "users_without_future_positive": 0
+        },
+        "5": {
+          "absolute_gender_gaps": {
+            "hitrate@10": 0.03289473684210531,
+            "ndcg@10": 0.0564461319481791,
+            "recall@10": 0.002133081891920227
+          },
+          "catalog_items": 3883,
+          "cohort_by_gender": {
+            "female": {
+              "ranking_eligibility_rate": 1.0,
+              "ranking_evaluated": 171,
+              "total": 171,
+              "without_future_positive": 0
+            },
+            "male": {
+              "ranking_eligibility_rate": 0.9976905311778291,
+              "ranking_evaluated": 432,
+              "total": 433,
+              "without_future_positive": 1
+            }
+          },
+          "coverage": 0.06018254420992584,
+          "eligible_catalog_items": 3506,
+          "excluded_cold_query_positives": 16,
+          "genre_exposure": {
+            "distribution_by_gender": {
+              "female": {
+                "Action": 0.1345921084483176,
+                "Adventure": 0.06221253933672234,
+                "Animation": 0.01718712176228516,
+                "Children's": 0.02493343016218833,
+                "Comedy": 0.11086903897361414,
+                "Crime": 0.04647785039941903,
+                "Documentary": 0.0,
+                "Drama": 0.2384410554345195,
+                "Fantasy": 0.022754780924715567,
+                "Film-Noir": 0.010167029774872912,
+                "Horror": 0.006293875574921327,
+                "Musical": 0.005083514887436456,
+                "Mystery": 0.010409101912369887,
+                "Romance": 0.04889857177438877,
+                "Sci-Fi": 0.0728637133865892,
+                "Thriller": 0.09900750423626241,
+                "War": 0.08956669087388042,
+                "Western": 0.0002420721374969741
+              },
+              "male": {
+                "Action": 0.1708307026246956,
+                "Adventure": 0.07865067195814919,
+                "Animation": 0.013799945882565166,
+                "Children's": 0.01903129791647876,
+                "Comedy": 0.08776044015513665,
+                "Crime": 0.038152791557680164,
+                "Documentary": 0.0,
+                "Drama": 0.2043835122215207,
+                "Fantasy": 0.024262649950392352,
+                "Film-Noir": 0.008748985298096871,
+                "Horror": 0.009921529719491297,
+                "Musical": 0.004419590511409759,
+                "Mystery": 0.008207810949760981,
+                "Romance": 0.03219987372598539,
+                "Sci-Fi": 0.10282312618381889,
+                "Thriller": 0.10480743212771715,
+                "War": 0.09145846486876522,
+                "Western": 0.0005411743483358888
+              }
+            },
+            "female_minus_male_by_genre": {
+              "Action": -0.03623859417637801,
+              "Adventure": -0.01643813262142685,
+              "Animation": 0.0033871758797199957,
+              "Children's": 0.005902132245709572,
+              "Comedy": 0.023108598818477488,
+              "Crime": 0.008325058841738862,
+              "Documentary": 0.0,
+              "Drama": 0.03405754321299878,
+              "Fantasy": -0.0015078690256767856,
+              "Film-Noir": 0.0014180444767760408,
+              "Horror": -0.00362765414456997,
+              "Musical": 0.0006639243760266965,
+              "Mystery": 0.0022012909626089056,
+              "Romance": 0.016698698048403383,
+              "Sci-Fi": -0.02995941279722969,
+              "Thriller": -0.00579992789145474,
+              "War": -0.001891773994884799,
+              "Western": -0.0002991022108389148
+            },
+            "jensen_shannon_between_genders": 0.008553241124864795,
+            "l1_between_genders": 0.1915249337249195,
+            "normalization": "multi-label genre tag share over hard Top-K items",
+            "preference_amplification": {
+              "amplification_by_genre": {
+                "Action": 0.0015361882576866576,
+                "Adventure": 0.004612561673909547,
+                "Animation": 0.007053893283316452,
+                "Children's": 0.0012602240432842693,
+                "Comedy": 0.0017276707725109863,
+                "Crime": 0.014724625475050337,
+                "Documentary": -0.0013402651940224567,
+                "Drama": -0.003080268898697308,
+                "Fantasy": 0.0034716809049602382,
+                "Film-Noir": 0.0035915913990796676,
+                "Horror": 0.003646516841970083,
+                "Musical": -0.00210110325630843,
+                "Mystery": 0.003214910645142342,
+                "Romance": -0.015421945496499091,
+                "Sci-Fi": -0.00428070025743351,
+                "Thriller": -0.01541733478677712,
+                "War": -0.005374102206489054,
+                "Western": 0.002175856799316381
+              },
+              "female_minus_male_history_by_genre": {
+                "Action": -0.037774782434064666,
+                "Adventure": -0.021050694295336396,
+                "Animation": -0.0036667174035964565,
+                "Children's": 0.004641908202425302,
+                "Comedy": 0.021380928045966502,
+                "Crime": -0.006399566633311475,
+                "Documentary": 0.0013402651940224567,
+                "Drama": 0.03713781211169609,
+                "Fantasy": -0.004979549930637024,
+                "Film-Noir": -0.002173546922303627,
+                "Horror": -0.007274170986540053,
+                "Musical": 0.0027650276323351267,
+                "Mystery": -0.0010136196825334363,
+                "Romance": 0.032120643544902475,
+                "Sci-Fi": -0.02567871253979618,
+                "Thriller": 0.00961740689532238,
+                "War": 0.0034823282116042548,
+                "Western": -0.002474959010155296
+              },
+              "history_l1_between_genders": 0.2249726396765492,
+              "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+              "recommendation_l1_between_genders": 0.1915249337249195,
+              "residual_l1": 0.09403144019245394,
+              "scalar_l1_amplification": -0.033447705951629714
+            }
+          },
+          "hitrate@10": 0.8656716417910447,
+          "ineligible_catalog_items": 377,
+          "metrics_by_gender": {
+            "female": {
+              "hitrate@10": 0.8421052631578947,
+              "ndcg@10": 0.34058727229935587,
+              "recall@10": 0.06307169622648856,
+              "users": 171
+            },
+            "male": {
+              "hitrate@10": 0.875,
+              "ndcg@10": 0.39703340424753497,
+              "recall@10": 0.06520477811840879,
+              "users": 432
+            }
+          },
+          "ndcg@10": 0.38102629220252904,
+          "posthoc_gender_probe": {
+            "protocol": {
+              "classifier": "class-balanced linear logistic regression (limited linear attack)",
+              "fit": "train users only",
+              "model_selection_and_threshold": "validation users only",
+              "positive_class": "female after validation-only orientation",
+              "report": "test users only",
+              "selection": "strongest validation abs(AUC - 0.5); direction invariant"
+            },
+            "selected_l2": 0.01,
+            "selected_threshold": 0.5520432421241998,
+            "test": {
+              "auc": 0.6899909512040301,
+              "auc_distance_from_random": 0.1899909512040301,
+              "balanced_accuracy": 0.6430655159839552,
+              "users": 604
+            },
+            "train_users": 4832,
+            "validation": {
+              "auc": 0.7120457031724808,
+              "auc_distance_from_random": 0.21204570317248084,
+              "balanced_accuracy": 0.6541469146306875,
+              "users": 604
+            }
+          },
+          "recall@10": 0.064599874298312,
+          "unique_recommended_items": 211,
+          "users_evaluated": 603,
+          "users_total": 604,
+          "users_with_known_binary_gender": 604,
+          "users_with_only_cold_future_positives": 0,
+          "users_without_future_positive": 1
+        }
+      }
+    },
+    "Popularity": {
+      "1": {
+        "absolute_gender_gaps": {
+          "hitrate@10": 0.010872060829517971,
+          "ndcg@10": 0.09773625163610755,
+          "recall@10": 0.00807270582633312
+        },
+        "catalog_items": 3883,
+        "cohort_by_gender": {
+          "female": {
+            "ranking_eligibility_rate": 1.0,
+            "ranking_evaluated": 171,
+            "total": 171,
+            "without_future_positive": 0
+          },
+          "male": {
+            "ranking_eligibility_rate": 1.0,
+            "ranking_evaluated": 433,
+            "total": 433,
+            "without_future_positive": 0
+          }
+        },
+        "coverage": 0.0031374786081003994,
+        "eligible_catalog_items": 3506,
+        "excluded_cold_query_positives": 18,
+        "genre_exposure": {
+          "distribution_by_gender": {
+            "female": {
+              "Action": 0.20152314001171645,
+              "Adventure": 0.13122437024018746,
+              "Animation": 0.0,
+              "Children's": 0.0,
+              "Comedy": 0.033001366920523335,
+              "Crime": 0.033391915641476276,
+              "Documentary": 0.0,
+              "Drama": 0.16461628588166374,
+              "Fantasy": 0.032806092560046865,
+              "Film-Noir": 0.0,
+              "Horror": 0.0,
+              "Musical": 0.0,
+              "Mystery": 0.0,
+              "Romance": 0.032415543839093924,
+              "Sci-Fi": 0.13591095489162272,
+              "Thriller": 0.13708260105448156,
+              "War": 0.09802772895918765,
+              "Western": 0.0
+            },
+            "male": {
+              "Action": 0.2018688701830257,
+              "Adventure": 0.13012587844621207,
+              "Animation": 0.0,
+              "Children's": 0.0,
+              "Comedy": 0.033361649548227665,
+              "Crime": 0.03343887558884856,
+              "Documentary": 0.0,
+              "Drama": 0.16472314464437407,
+              "Fantasy": 0.03251216310139779,
+              "Film-Noir": 0.0,
+              "Horror": 0.0,
+              "Musical": 0.0,
+              "Mystery": 0.0,
+              "Romance": 0.03212603289829331,
+              "Sci-Fi": 0.13614950961464206,
+              "Thriller": 0.1380029345895436,
+              "War": 0.09769094138543517,
+              "Western": 0.0
+            }
+          },
+          "female_minus_male_by_genre": {
+            "Action": -0.00034573017130926087,
+            "Adventure": 0.0010984917939753924,
+            "Animation": 0.0,
+            "Children's": 0.0,
+            "Comedy": -0.00036028262770432945,
+            "Crime": -4.695994737228398e-05,
+            "Documentary": 0.0,
+            "Drama": -0.0001068587627103268,
+            "Fantasy": 0.0002939294586490754,
+            "Film-Noir": 0.0,
+            "Horror": 0.0,
+            "Musical": 0.0,
+            "Mystery": 0.0,
+            "Romance": 0.00028951094080061773,
+            "Sci-Fi": -0.00023855472301934078,
+            "Thriller": -0.0009203335350620456,
+            "War": 0.00033678757375248114,
+            "Western": 0.0
+          },
+          "jensen_shannon_between_genders": 4.842483133030536e-06,
+          "l1_between_genders": 0.004037439534355154,
+          "normalization": "multi-label genre tag share over hard Top-K items",
+          "preference_amplification": {
+            "amplification_by_genre": {
+              "Action": 0.021470438156486985,
+              "Adventure": 0.03921587828345491,
+              "Animation": 0.008165374677002585,
+              "Children's": -0.0028497600590623832,
+              "Comedy": -0.0020804745804544125,
+              "Crime": -0.011320492616253792,
+              "Documentary": 0.004761904761904762,
+              "Drama": -0.07225156160508758,
+              "Fantasy": 0.007920359875777168,
+              "Film-Noir": -0.00570690291620524,
+              "Horror": 0.0023181985972683655,
+              "Musical": 0.004355850867478775,
+              "Mystery": -0.011007751937984495,
+              "Romance": -0.0003527924922004863,
+              "Sci-Fi": 0.022234682633938956,
+              "Thriller": -0.010274338703020705,
+              "War": -0.0012652796097100544,
+              "Western": 0.006666666666666667
+            },
+            "female_minus_male_history_by_genre": {
+              "Action": -0.021816168327796245,
+              "Adventure": -0.038117386489479516,
+              "Animation": -0.008165374677002585,
+              "Children's": 0.0028497600590623832,
+              "Comedy": 0.001720191952750083,
+              "Crime": 0.011273532668881509,
+              "Documentary": -0.004761904761904762,
+              "Drama": 0.07214470284237726,
+              "Fantasy": -0.0076264304171280925,
+              "Film-Noir": 0.00570690291620524,
+              "Horror": -0.0023181985972683655,
+              "Musical": -0.004355850867478775,
+              "Mystery": 0.011007751937984495,
+              "Romance": 0.000642303433001104,
+              "Sci-Fi": -0.022473237356958296,
+              "Thriller": 0.00935400516795866,
+              "War": 0.0016020671834625355,
+              "Western": -0.006666666666666667
+            },
+            "history_l1_between_genders": 0.23260243632336655,
+            "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+            "recommendation_l1_between_genders": 0.004037439534355154,
+            "residual_l1": 0.23421870903995834,
+            "scalar_l1_amplification": -0.2285649967890114
+          }
+        },
+        "hitrate@10": 0.8791390728476821,
+        "ineligible_catalog_items": 377,
+        "metrics_by_gender": {
+          "female": {
+            "hitrate@10": 0.8713450292397661,
+            "ndcg@10": 0.3083802061658635,
+            "recall@10": 0.05005893233415333,
+            "users": 171
+          },
+          "male": {
+            "hitrate@10": 0.8822170900692841,
+            "ndcg@10": 0.40611645780197103,
+            "recall@10": 0.05813163816048645,
+            "users": 433
+          }
+        },
+        "ndcg@10": 0.3784460951698942,
+        "recall@10": 0.05584615356395837,
+        "unique_recommended_items": 11,
+        "users_evaluated": 604,
+        "users_total": 604,
+        "users_with_known_binary_gender": 604,
+        "users_with_only_cold_future_positives": 0,
+        "users_without_future_positive": 0
+      },
+      "10": {
+        "absolute_gender_gaps": {
+          "hitrate@10": 0.06592609132522054,
+          "ndcg@10": 0.10758101718993776,
+          "recall@10": 0.01396544091594687
+        },
+        "catalog_items": 3883,
+        "cohort_by_gender": {
+          "female": {
+            "ranking_eligibility_rate": 0.9883040935672515,
+            "ranking_evaluated": 169,
+            "total": 171,
+            "without_future_positive": 2
+          },
+          "male": {
+            "ranking_eligibility_rate": 0.9792147806004619,
+            "ranking_evaluated": 424,
+            "total": 433,
+            "without_future_positive": 9
+          }
+        },
+        "coverage": 0.004848830576155163,
+        "eligible_catalog_items": 3506,
+        "excluded_cold_query_positives": 15,
+        "genre_exposure": {
+          "distribution_by_gender": {
+            "female": {
+              "Action": 0.20911580594679186,
+              "Adventure": 0.12265258215962441,
+              "Animation": 0.0,
+              "Children's": 0.0,
+              "Comedy": 0.024843505477308295,
+              "Crime": 0.03345070422535211,
+              "Documentary": 0.0,
+              "Drama": 0.15923317683881064,
+              "Fantasy": 0.031103286384976527,
+              "Film-Noir": 0.0,
+              "Horror": 0.0,
+              "Musical": 0.0,
+              "Mystery": 0.0,
+              "Romance": 0.029342723004694836,
+              "Sci-Fi": 0.14553990610328638,
+              "Thriller": 0.14553990610328638,
+              "War": 0.09917840375586855,
+              "Western": 0.0
+            },
+            "male": {
+              "Action": 0.20438243871679673,
+              "Adventure": 0.1185465437061559,
+              "Animation": 0.0,
+              "Children's": 0.0,
+              "Comedy": 0.02656262315756286,
+              "Crime": 0.03405060297942776,
+              "Documentary": 0.0,
+              "Drama": 0.16725782296839284,
+              "Fantasy": 0.029242531725388193,
+              "Film-Noir": 0.0,
+              "Horror": 0.0,
+              "Musical": 0.0,
+              "Mystery": 0.0,
+              "Romance": 0.029636635926538975,
+              "Sci-Fi": 0.1414045873729014,
+              "Thriller": 0.1479467171120044,
+              "War": 0.10096949633483093,
+              "Western": 0.0
+            }
+          },
+          "female_minus_male_by_genre": {
+            "Action": 0.004733367229995122,
+            "Adventure": 0.004106038453468505,
+            "Animation": 0.0,
+            "Children's": 0.0,
+            "Comedy": -0.0017191176802545637,
+            "Crime": -0.0005998987540756506,
+            "Documentary": 0.0,
+            "Drama": -0.008024646129582202,
+            "Fantasy": 0.0018607546595883345,
+            "Film-Noir": 0.0,
+            "Horror": 0.0,
+            "Musical": 0.0,
+            "Mystery": 0.0,
+            "Romance": -0.00029391292184413956,
+            "Sci-Fi": 0.004135318730384974,
+            "Thriller": -0.002406811008718035,
+            "War": -0.001791092578962386,
+            "Western": 0.0
+          },
+          "jensen_shannon_between_genders": 0.0001941822862513928,
+          "l1_between_genders": 0.029670958146873913,
+          "normalization": "multi-label genre tag share over hard Top-K items",
+          "preference_amplification": {
+            "amplification_by_genre": {
+              "Action": 0.044892027386547295,
+              "Adventure": 0.019166456716922277,
+              "Animation": -0.0004069900212555662,
+              "Children's": -0.008173392665242234,
+              "Comedy": -0.03158308143515201,
+              "Crime": 0.006385160711894024,
+              "Documentary": -0.0008027620834215512,
+              "Drama": -0.04637456447578381,
+              "Fantasy": 0.0031065028527726846,
+              "Film-Noir": 0.002072117300404309,
+              "Horror": 0.0074357810365332545,
+              "Musical": -0.005625529116305273,
+              "Mystery": 0.0021213961921192626,
+              "Romance": -0.03011802826711844,
+              "Sci-Fi": 0.03297299332143027,
+              "Thriller": -0.0009098914787751822,
+              "War": 0.0018141868884434323,
+              "Western": 0.004027617135987244
+            },
+            "female_minus_male_history_by_genre": {
+              "Action": -0.04015866015655217,
+              "Adventure": -0.015060418263453772,
+              "Animation": 0.0004069900212555662,
+              "Children's": 0.008173392665242234,
+              "Comedy": 0.029863963754897443,
+              "Crime": -0.006985059465969674,
+              "Documentary": 0.0008027620834215512,
+              "Drama": 0.038349918346201606,
+              "Fantasy": -0.00124574819318435,
+              "Film-Noir": -0.002072117300404309,
+              "Horror": -0.0074357810365332545,
+              "Musical": 0.005625529116305273,
+              "Mystery": -0.0021213961921192626,
+              "Romance": 0.0298241153452743,
+              "Sci-Fi": -0.028837674591045297,
+              "Thriller": -0.0014969195299428528,
+              "War": -0.0036052794674058183,
+              "Western": -0.004027617135987244
+            },
+            "history_l1_between_genders": 0.22609334266519598,
+            "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+            "recommendation_l1_between_genders": 0.029670958146873913,
+            "residual_l1": 0.24798847908610808,
+            "scalar_l1_amplification": -0.19642238451832206
+          }
+        },
+        "hitrate@10": 0.7453625632377741,
+        "ineligible_catalog_items": 377,
+        "metrics_by_gender": {
+          "female": {
+            "hitrate@10": 0.6982248520710059,
+            "ndcg@10": 0.22726605346075582,
+            "recall@10": 0.036042317437675477,
+            "users": 169
+          },
+          "male": {
+            "hitrate@10": 0.7641509433962265,
+            "ndcg@10": 0.3348470706506936,
+            "recall@10": 0.050007758353622346,
+            "users": 424
+          }
+        },
+        "ndcg@10": 0.30418738784276866,
+        "recall@10": 0.04602772544503041,
+        "unique_recommended_items": 17,
+        "users_evaluated": 593,
+        "users_total": 604,
+        "users_with_known_binary_gender": 604,
+        "users_with_only_cold_future_positives": 0,
+        "users_without_future_positive": 11
+      },
+      "20": {
+        "absolute_gender_gaps": {
+          "hitrate@10": 0.0018547750591948464,
+          "ndcg@10": 0.10471697989444265,
+          "recall@10": 0.007785514554731476
+        },
+        "catalog_items": 3883,
+        "cohort_by_gender": {
+          "female": {
+            "ranking_eligibility_rate": 0.8187134502923976,
+            "ranking_evaluated": 140,
+            "total": 171,
+            "without_future_positive": 31
+          },
+          "male": {
+            "ranking_eligibility_rate": 0.836027713625866,
+            "ranking_evaluated": 362,
+            "total": 433,
+            "without_future_positive": 71
+          }
+        },
+        "coverage": 0.005989731888191671,
+        "eligible_catalog_items": 3506,
+        "excluded_cold_query_positives": 14,
+        "genre_exposure": {
+          "distribution_by_gender": {
+            "female": {
+              "Action": 0.21207974980453478,
+              "Adventure": 0.12079749804534792,
+              "Animation": 0.0,
+              "Children's": 0.0,
+              "Comedy": 0.024824081313526192,
+              "Crime": 0.033620015637216574,
+              "Documentary": 0.0,
+              "Drama": 0.15989053948397186,
+              "Fantasy": 0.029906176700547304,
+              "Film-Noir": 0.00019546520719311962,
+              "Horror": 0.0,
+              "Musical": 0.0,
+              "Mystery": 0.00019546520719311962,
+              "Romance": 0.031078967943706022,
+              "Sci-Fi": 0.14562157935887413,
+              "Thriller": 0.14073494917904614,
+              "War": 0.10105551211884285,
+              "Western": 0.0
+            },
+            "male": {
+              "Action": 0.2036296770067157,
+              "Adventure": 0.11400703549728174,
+              "Animation": 0.0,
+              "Children's": 0.0,
+              "Comedy": 0.028941477454429165,
+              "Crime": 0.03741605372561561,
+              "Documentary": 0.0,
+              "Drama": 0.1759673808762392,
+              "Fantasy": 0.027182603133994242,
+              "Film-Noir": 0.00039974416373520947,
+              "Horror": 0.0,
+              "Musical": 0.0,
+              "Mystery": 0.00039974416373520947,
+              "Romance": 0.03165973776782859,
+              "Sci-Fi": 0.13503357850975375,
+              "Thriller": 0.14126958746402302,
+              "War": 0.10409338023664855,
+              "Western": 0.0
+            }
+          },
+          "female_minus_male_by_genre": {
+            "Action": 0.008450072797819091,
+            "Adventure": 0.006790462548066187,
+            "Animation": 0.0,
+            "Children's": 0.0,
+            "Comedy": -0.004117396140902972,
+            "Crime": -0.0037960380883990327,
+            "Documentary": 0.0,
+            "Drama": -0.016076841392267338,
+            "Fantasy": 0.0027235735665530614,
+            "Film-Noir": -0.00020427895654208985,
+            "Horror": 0.0,
+            "Musical": 0.0,
+            "Mystery": -0.00020427895654208985,
+            "Romance": -0.0005807698241225706,
+            "Sci-Fi": 0.010588000849120371,
+            "Thriller": -0.0005346382849768794,
+            "War": -0.003037868117805695,
+            "Western": 0.0
+          },
+          "jensen_shannon_between_genders": 0.000858627782148771,
+          "l1_between_genders": 0.05710421952311738,
+          "normalization": "multi-label genre tag share over hard Top-K items",
+          "preference_amplification": {
+            "amplification_by_genre": {
+              "Action": 0.06032294032336344,
+              "Adventure": 0.02089858583038983,
+              "Animation": -0.002656933837178195,
+              "Children's": -0.011681456494738611,
+              "Comedy": -0.03698263797695497,
+              "Crime": 0.0022698868814778686,
+              "Documentary": -0.002277360082675187,
+              "Drama": -0.06200440002153121,
+              "Fantasy": 0.0020233737626881524,
+              "Film-Noir": -0.000245130128426591,
+              "Horror": 0.011099440656355902,
+              "Musical": -0.007292243347669031,
+              "Mystery": -0.0016224040979856648,
+              "Romance": -0.04130328731159824,
+              "Sci-Fi": 0.051730077597383586,
+              "Thriller": 0.005867453492890043,
+              "War": 0.006439067871169851,
+              "Western": 0.005415026883039097
+            },
+            "female_minus_male_history_by_genre": {
+              "Action": -0.05187286752554435,
+              "Adventure": -0.014108123282323644,
+              "Animation": 0.002656933837178195,
+              "Children's": 0.011681456494738611,
+              "Comedy": 0.032865241836051995,
+              "Crime": -0.006065924969876901,
+              "Documentary": 0.002277360082675187,
+              "Drama": 0.04592755862926387,
+              "Fantasy": 0.000700199803864909,
+              "Film-Noir": 4.085117188450116e-05,
+              "Horror": -0.011099440656355902,
+              "Musical": 0.007292243347669031,
+              "Mystery": 0.0014181251414435748,
+              "Romance": 0.04072251748747567,
+              "Sci-Fi": -0.041142076748263215,
+              "Thriller": -0.006402091777866922,
+              "War": -0.009476935988975546,
+              "Western": -0.005415026883039097
+            },
+            "history_l1_between_genders": 0.2911649756644911,
+            "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+            "recommendation_l1_between_genders": 0.05710421952311738,
+            "residual_l1": 0.33213170659751545,
+            "scalar_l1_amplification": -0.23406075614137373
+          }
+        },
+        "hitrate@10": 0.7370517928286853,
+        "ineligible_catalog_items": 377,
+        "metrics_by_gender": {
+          "female": {
+            "hitrate@10": 0.7357142857142858,
+            "ndcg@10": 0.22351079264095816,
+            "recall@10": 0.03770579488042585,
+            "users": 140
+          },
+          "male": {
+            "hitrate@10": 0.7375690607734806,
+            "ndcg@10": 0.3282277725354008,
+            "recall@10": 0.04549130943515733,
+            "users": 362
+          }
+        },
+        "ndcg@10": 0.29902383391942083,
+        "recall@10": 0.04332005039598919,
+        "unique_recommended_items": 21,
+        "users_evaluated": 502,
+        "users_total": 604,
+        "users_with_known_binary_gender": 604,
+        "users_with_only_cold_future_positives": 0,
+        "users_without_future_positive": 102
+      },
+      "3": {
+        "absolute_gender_gaps": {
+          "hitrate@10": 0.02763259187229039,
+          "ndcg@10": 0.09777615072115936,
+          "recall@10": 0.008876347997440158
+        },
+        "catalog_items": 3883,
+        "cohort_by_gender": {
+          "female": {
+            "ranking_eligibility_rate": 1.0,
+            "ranking_evaluated": 171,
+            "total": 171,
+            "without_future_positive": 0
+          },
+          "male": {
+            "ranking_eligibility_rate": 1.0,
+            "ranking_evaluated": 433,
+            "total": 433,
+            "without_future_positive": 0
+          }
+        },
+        "coverage": 0.0037079292641186536,
+        "eligible_catalog_items": 3506,
+        "excluded_cold_query_positives": 17,
+        "genre_exposure": {
+          "distribution_by_gender": {
+            "female": {
+              "Action": 0.2028700609396501,
+              "Adventure": 0.1267937880872813,
+              "Animation": 0.0,
+              "Children's": 0.0,
+              "Comedy": 0.03243562020837429,
+              "Crime": 0.033615097306860624,
+              "Documentary": 0.0,
+              "Drama": 0.16375073717318656,
+              "Fantasy": 0.032632199724788674,
+              "Film-Noir": 0.0,
+              "Horror": 0.0,
+              "Musical": 0.0,
+              "Mystery": 0.0,
+              "Romance": 0.02988008649498722,
+              "Sci-Fi": 0.13898171810497345,
+              "Thriller": 0.14330646746609002,
+              "War": 0.09573422449380775,
+              "Western": 0.0
+            },
+            "male": {
+              "Action": 0.2039340693515783,
+              "Adventure": 0.12463069507075104,
+              "Animation": 0.0,
+              "Children's": 0.0,
+              "Comedy": 0.03226558855543461,
+              "Crime": 0.033587311460115066,
+              "Documentary": 0.0,
+              "Drama": 0.1630384077126419,
+              "Fantasy": 0.031643601306173226,
+              "Film-Noir": 0.0,
+              "Horror": 0.0,
+              "Musical": 0.0,
+              "Mystery": 0.0,
+              "Romance": 0.029777639558389052,
+              "Sci-Fi": 0.14010262789612812,
+              "Thriller": 0.1455450163271653,
+              "War": 0.09547504276162339,
+              "Western": 0.0
+            }
+          },
+          "female_minus_male_by_genre": {
+            "Action": -0.0010640084119281912,
+            "Adventure": 0.002163093016530268,
+            "Animation": 0.0,
+            "Children's": 0.0,
+            "Comedy": 0.0001700316529396756,
+            "Crime": 2.7785846745558007e-05,
+            "Documentary": 0.0,
+            "Drama": 0.0007123294605446695,
+            "Fantasy": 0.0009885984186154481,
+            "Film-Noir": 0.0,
+            "Horror": 0.0,
+            "Musical": 0.0,
+            "Mystery": 0.0,
+            "Romance": 0.00010244693659816964,
+            "Sci-Fi": -0.0011209097911546728,
+            "Thriller": -0.0022385488610752735,
+            "War": 0.0002591817321843659,
+            "Western": 0.0
+          },
+          "jensen_shannon_between_genders": 2.1996656056011543e-05,
+          "l1_between_genders": 0.008846934128316292,
+          "normalization": "multi-label genre tag share over hard Top-K items",
+          "preference_amplification": {
+            "amplification_by_genre": {
+              "Action": 0.031015887559423486,
+              "Adventure": 0.023755719572849665,
+              "Animation": 0.0024415784008672576,
+              "Children's": -0.005419477588385225,
+              "Comedy": -0.018684721248248062,
+              "Crime": -0.0003772389221895697,
+              "Documentary": 0.0009067631223482527,
+              "Drama": -0.030211399569092773,
+              "Fantasy": 0.007576258878907633,
+              "Film-Noir": -0.00067758123428221,
+              "Horror": 0.008439579067311777,
+              "Musical": 0.0006553078027054602,
+              "Mystery": -0.00014243273350396032,
+              "Romance": -0.02998280462276184,
+              "Sci-Fi": 0.025109572748086874,
+              "Thriller": -0.009511117342352549,
+              "War": -0.009132879606501623,
+              "Western": 0.00423898571481743
+            },
+            "female_minus_male_history_by_genre": {
+              "Action": -0.03207989597135168,
+              "Adventure": -0.021592626556319397,
+              "Animation": -0.0024415784008672576,
+              "Children's": 0.005419477588385225,
+              "Comedy": 0.018854752901187738,
+              "Crime": 0.00040502476893512773,
+              "Documentary": -0.0009067631223482527,
+              "Drama": 0.030923729029637442,
+              "Fantasy": -0.006587660460292185,
+              "Film-Noir": 0.00067758123428221,
+              "Horror": -0.008439579067311777,
+              "Musical": -0.0006553078027054602,
+              "Mystery": 0.00014243273350396032,
+              "Romance": 0.03008525155936001,
+              "Sci-Fi": -0.026230482539241547,
+              "Thriller": 0.007272568481277275,
+              "War": 0.00939206133868599,
+              "Western": -0.00423898571481743
+            },
+            "history_l1_between_genders": 0.20634575927050994,
+            "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+            "recommendation_l1_between_genders": 0.008846934128316292,
+            "residual_l1": 0.20827930573463563,
+            "scalar_l1_amplification": -0.19749882514219363
+          }
+        },
+        "hitrate@10": 0.8443708609271523,
+        "ineligible_catalog_items": 377,
+        "metrics_by_gender": {
+          "female": {
+            "hitrate@10": 0.8245614035087719,
+            "ndcg@10": 0.28795523542562607,
+            "recall@10": 0.04634263500374894,
+            "users": 171
+          },
+          "male": {
+            "hitrate@10": 0.8521939953810623,
+            "ndcg@10": 0.3857313861467854,
+            "recall@10": 0.0552189830011891,
+            "users": 433
+          }
+        },
+        "ndcg@10": 0.358049727581689,
+        "recall@10": 0.052705977193966795,
+        "unique_recommended_items": 13,
+        "users_evaluated": 604,
+        "users_total": 604,
+        "users_with_known_binary_gender": 604,
+        "users_with_only_cold_future_positives": 0,
+        "users_without_future_positive": 0
+      },
+      "5": {
+        "absolute_gender_gaps": {
+          "hitrate@10": 0.03228557504873297,
+          "ndcg@10": 0.100554665800339,
+          "recall@10": 0.008047975090203448
+        },
+        "catalog_items": 3883,
+        "cohort_by_gender": {
+          "female": {
+            "ranking_eligibility_rate": 1.0,
+            "ranking_evaluated": 171,
+            "total": 171,
+            "without_future_positive": 0
+          },
+          "male": {
+            "ranking_eligibility_rate": 0.9976905311778291,
+            "ranking_evaluated": 432,
+            "total": 433,
+            "without_future_positive": 1
+          }
+        },
+        "coverage": 0.004278379920136908,
+        "eligible_catalog_items": 3506,
+        "excluded_cold_query_positives": 16,
+        "genre_exposure": {
+          "distribution_by_gender": {
+            "female": {
+              "Action": 0.2061128526645768,
+              "Adventure": 0.12558777429467086,
+              "Animation": 0.0,
+              "Children's": 0.0,
+              "Comedy": 0.028996865203761754,
+              "Crime": 0.03330721003134796,
+              "Documentary": 0.0,
+              "Drama": 0.16046238244514108,
+              "Fantasy": 0.03213166144200627,
+              "Film-Noir": 0.0,
+              "Horror": 0.0,
+              "Musical": 0.0,
+              "Mystery": 0.0,
+              "Romance": 0.02938871473354232,
+              "Sci-Fi": 0.1426332288401254,
+              "Thriller": 0.14537617554858934,
+              "War": 0.09600313479623825,
+              "Western": 0.0
+            },
+            "male": {
+              "Action": 0.2044548651817116,
+              "Adventure": 0.12184447049628762,
+              "Animation": 0.0,
+              "Children's": 0.0,
+              "Comedy": 0.029230168034388434,
+              "Crime": 0.03337241109808519,
+              "Documentary": 0.0,
+              "Drama": 0.1634232121922626,
+              "Fantasy": 0.030558812035951545,
+              "Film-Noir": 0.0,
+              "Horror": 0.0,
+              "Musical": 0.0,
+              "Mystery": 0.0,
+              "Romance": 0.029386479093395857,
+              "Sci-Fi": 0.14161781946072685,
+              "Thriller": 0.14849550605705353,
+              "War": 0.09761625635013677,
+              "Western": 0.0
+            }
+          },
+          "female_minus_male_by_genre": {
+            "Action": 0.001657987482865192,
+            "Adventure": 0.003743303798383238,
+            "Animation": 0.0,
+            "Children's": 0.0,
+            "Comedy": -0.00023330283062667975,
+            "Crime": -6.52010667372277e-05,
+            "Documentary": 0.0,
+            "Drama": -0.0029608297471215295,
+            "Fantasy": 0.0015728494060547257,
+            "Film-Noir": 0.0,
+            "Horror": 0.0,
+            "Musical": 0.0,
+            "Mystery": 0.0,
+            "Romance": 2.2356401464633524e-06,
+            "Sci-Fi": 0.0010154093793985353,
+            "Thriller": -0.003119330508464191,
+            "War": -0.0016131215538985194,
+            "Western": 0.0
+          },
+          "jensen_shannon_between_genders": 6.529561781261513e-05,
+          "l1_between_genders": 0.0159835714136963,
+          "normalization": "multi-label genre tag share over hard Top-K items",
+          "preference_amplification": {
+            "amplification_by_genre": {
+              "Action": 0.03943276991692986,
+              "Adventure": 0.024793998093719634,
+              "Animation": 0.0036667174035964565,
+              "Children's": -0.004641908202425302,
+              "Comedy": -0.02161423087659318,
+              "Crime": 0.006334365566574247,
+              "Documentary": -0.0013402651940224567,
+              "Drama": -0.04009864185881762,
+              "Fantasy": 0.0065523993366917496,
+              "Film-Noir": 0.002173546922303627,
+              "Horror": 0.007274170986540053,
+              "Musical": -0.0027650276323351267,
+              "Mystery": 0.0010136196825334363,
+              "Romance": -0.03211840790475601,
+              "Sci-Fi": 0.026694121919194715,
+              "Thriller": -0.012736737403786572,
+              "War": -0.005095449765502774,
+              "Western": 0.002474959010155296
+            },
+            "female_minus_male_history_by_genre": {
+              "Action": -0.037774782434064666,
+              "Adventure": -0.021050694295336396,
+              "Animation": -0.0036667174035964565,
+              "Children's": 0.004641908202425302,
+              "Comedy": 0.021380928045966502,
+              "Crime": -0.006399566633311475,
+              "Documentary": 0.0013402651940224567,
+              "Drama": 0.03713781211169609,
+              "Fantasy": -0.004979549930637024,
+              "Film-Noir": -0.002173546922303627,
+              "Horror": -0.007274170986540053,
+              "Musical": 0.0027650276323351267,
+              "Mystery": -0.0010136196825334363,
+              "Romance": 0.032120643544902475,
+              "Sci-Fi": -0.02567871253979618,
+              "Thriller": 0.00961740689532238,
+              "War": 0.0034823282116042548,
+              "Western": -0.002474959010155296
+            },
+            "history_l1_between_genders": 0.2249726396765492,
+            "interpretation": "recommendation gender disparity minus observed-positive-history gender disparity; descriptive, not causal",
+            "recommendation_l1_between_genders": 0.0159835714136963,
+            "residual_l1": 0.2408213376764781,
+            "scalar_l1_amplification": -0.2089890682628529
+          }
+        },
+        "hitrate@10": 0.8126036484245439,
+        "ineligible_catalog_items": 377,
+        "metrics_by_gender": {
+          "female": {
+            "hitrate@10": 0.7894736842105263,
+            "ndcg@10": 0.26483968996160023,
+            "recall@10": 0.04491305507700919,
+            "users": 171
+          },
+          "male": {
+            "hitrate@10": 0.8217592592592593,
+            "ndcg@10": 0.36539435576193924,
+            "recall@10": 0.05296103016721264,
+            "users": 432
+          }
+        },
+        "ndcg@10": 0.33687885352005204,
+        "recall@10": 0.05067876857446839,
+        "unique_recommended_items": 15,
+        "users_evaluated": 603,
+        "users_total": 604,
+        "users_with_known_binary_gender": 604,
+        "users_with_only_cold_future_positives": 0,
+        "users_without_future_positive": 1
+      }
+    }
+  },
+  "protocol": {
+    "candidates": "all train-warm items; support and cold items set to -inf",
+    "dataset": "MovieLens 1M",
+    "evaluation": "user-disjoint test users",
+    "positive": "rating >= 4",
+    "probe": "fit train latents, select validation, report test",
+    "query": "remaining later positives",
+    "support": "first N chronological positives",
+    "top_k": 10,
+    "train": "few-shot positive support inputs with complete-positive reconstruction targets"
+  },
+  "test_users": 604,
+  "warm_catalog_items": 3506
+}
